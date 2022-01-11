@@ -5,8 +5,7 @@ const project = new CDKTFConstruct({
   defaultReleaseBranch: "main",
   name: "cdktf-cdk8s",
   repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-cdk8s.git",
-
-  deps: [],
+  bundledDeps: ["yaml@1.10.2"],
   peerDeps: ["@cdktf/provider-kubernetes@>=0.5.129", "cdk8s@>=2.1.6"],
   devDeps: ["@dschmidt/cdktf-construct-base@0.0.6", "cdk8s-cli@1.0.74"],
   description:
