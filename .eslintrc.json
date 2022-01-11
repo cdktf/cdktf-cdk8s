@@ -36,12 +36,8 @@
     }
   },
   "ignorePatterns": [
-    "*.js",
-    "!.projenrc.js",
-    "*.d.ts",
-    "node_modules/",
-    "*.generated.ts",
-    "coverage"
+    "**/node_modules/**",
+    "**/test/imports/**"
   ],
   "rules": {
     "prettier/prettier": [

@@ -192,7 +192,7 @@
       "description": "Run tests",
       "steps": [
         {
-          "exec": "cdk8s import k8s --language typescript --out ./test"
+          "exec": "cd ./test && cdk8s import k8s --language typescript"
         },
         {
           "exec": "jest --passWithNoTests --all --updateSnapshot"

@@ -21,7 +21,7 @@ const project = new CDKTFConstruct({
 });
 
 project.testTask.prependExec(
-  `cdk8s import k8s --language typescript --out ./test`
+  `cd ./test && cdk8s import k8s --language typescript`
 );
 
 project.synth();
