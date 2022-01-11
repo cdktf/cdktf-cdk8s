@@ -13,13 +13,17 @@ class MyChart extends Chart {
     const deployment = new Deployment(this, "deployment", {
       metadata: {
         labels,
+        namespace: "default",
       },
       podMetadata: {
         labels,
       },
+      volumes: [],
     });
     deployment.addContainer({
       image: "nginx:latest",
+      env: {},
+      port: 80,
     });
   }
 }
@@ -33,6 +37,8 @@ class MyStack extends TerraformStack {
 
     new CDK8sProvider(this, "cdk8s-provider", {
       cdk8sApp: cdk8s,
+      configContext: "kind-kind",
+      configPath: "~/.kube/config",
     });
 
     // define resources here

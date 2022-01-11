@@ -930,8 +930,12 @@ cdk8s@^2.1.7:
     follow-redirects "^1.14.7"
     yaml "2.0.0-7"
 
-"cdktf-cdk8s@file:../..":
-  version "0.0.0"
+cdktf-cdk8s@latest:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/cdktf-cdk8s/-/cdktf-cdk8s-0.0.1.tgz#60bcd3d3e13352b25244fe4e5a8209297c2a8873"
+  integrity sha512-ZZY8aysvHWubNW0aECi/WJNoLAuAv+PHOTJ36OgV2KTaBJhFtPSAS+Y2w1WRhIcT6yF903uGfn9cUCxlgcJ7fA==
+  dependencies:
+    yaml "1.10.2"
 
 cdktf@^0.8.6:
   version "0.8.6"
@@ -2842,6 +2846,11 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+
+yaml@1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
+  integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
 yaml@2.0.0-7:
   version "2.0.0-7"

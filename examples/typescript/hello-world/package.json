@@ -9,6 +9,7 @@
     "get": "cdktf get",
     "build": "tsc",
     "synth": "cdktf synth",
+    "deploy": "cdktf deploy",
     "compile": "tsc --pretty",
     "watch": "tsc -w",
     "test": "jest",
@@ -23,7 +24,7 @@
     "cdktf": "^0.8.6",
     "constructs": "^10.0.30",
     "@cdktf/provider-kubernetes": "latest",
-    "cdktf-cdk8s": "file:../../",
+    "cdktf-cdk8s": "latest",
     "cdk8s": "^2.1.7",
     "cdk8s-plus-21": "^1.0.0-beta.73"
   },
