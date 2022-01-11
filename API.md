@@ -40,23 +40,6 @@ new CDK8sProvider(scope: Construct, id: string, config: CDK8sProviderConfig)
 
 
 
-#### Properties <a name="Properties" id="properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| [`app`](#cdktfcdk8scdk8sproviderpropertyapp)<span title="Required">*</span> | [`cdk8s.App`](#cdk8s.App) | *No description.* |
-
----
-
-##### `app`<sup>Required</sup> <a name="cdktf-cdk8s.CDK8sProvider.property.app" id="cdktfcdk8scdk8sproviderpropertyapp"></a>
-
-```typescript
-public readonly app: App;
-```
-
-- *Type:* [`cdk8s.App`](#cdk8s.App)
-
----
 
 
 ## Structs <a name="Structs" id="structs"></a>
@@ -92,6 +75,7 @@ const cDK8sProviderConfig: CDK8sProviderConfig = { ... }
 | [`proxyUrl`](#cdktfcdk8scdk8sproviderconfigpropertyproxyurl) | `string` | URL to the proxy to be used for all API requests. |
 | [`token`](#cdktfcdk8scdk8sproviderconfigpropertytoken) | `string` | Token to authenticate an service account. |
 | [`username`](#cdktfcdk8scdk8sproviderconfigpropertyusername) | `string` | The username to use for HTTP basic authentication when accessing the Kubernetes master endpoint. |
+| [`cdk8sApp`](#cdktfcdk8scdk8sproviderconfigpropertycdk8sapp)<span title="Required">*</span> | [`cdk8s.App`](#cdk8s.App) | *No description.* |
 
 ---
 
@@ -324,6 +308,16 @@ public readonly username: string;
 The username to use for HTTP basic authentication when accessing the Kubernetes master endpoint.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/kubernetes#username KubernetesProvider#username}
+
+---
+
+##### `cdk8sApp`<sup>Required</sup> <a name="cdktf-cdk8s.CDK8sProviderConfig.property.cdk8sApp" id="cdktfcdk8scdk8sproviderconfigpropertycdk8sapp"></a>
+
+```typescript
+public readonly cdk8sApp: App;
+```
+
+- *Type:* [`cdk8s.App`](#cdk8s.App)
 
 ---
 

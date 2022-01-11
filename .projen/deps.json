@@ -126,6 +126,11 @@
       "type": "build"
     },
     {
+      "name": "yaml",
+      "version": "1.10.2",
+      "type": "bundled"
+    },
+    {
       "name": "@cdktf/provider-kubernetes",
       "version": ">=0.5.129",
       "type": "peer"

@@ -1,24 +1,36 @@
 import {
   KubernetesProvider,
   KubernetesProviderConfig,
+  Manifest,
 } from "@cdktf/provider-kubernetes";
 import { App } from "cdk8s";
-import { TerraformAsset } from "cdktf";
-import { Construct } from "constructs";
+import { Aspects } from "cdktf";
+import { Construct, IConstruct } from "constructs";
+import * as yaml from "yaml";
 
-export interface CDK8sProviderConfig extends KubernetesProviderConfig {}
+export interface CDK8sProviderConfig extends KubernetesProviderConfig {
+  readonly cdk8sApp: App;
+}
 
 export class CDK8sProvider extends KubernetesProvider {
-  public app: App;
   constructor(scope: Construct, id: string, config: CDK8sProviderConfig) {
     super(scope, id, config);
 
-    const assetPath = new TerraformAsset(this, "cdk8s-out-path", {
-      path: __dirname, // Hack to get a TMP dir, empty would be better
-    });
+    Aspects.of(scope).add({
+      visit: (node: IConstruct) => {
+        // Only run once
+        if (node !== this) return;
 
-    this.app = new App({
-      outdir: assetPath.path,
+        const yamlManifests = yaml.parseAllDocuments(
+          config.cdk8sApp.synthYaml()
+        );
+
+        yamlManifests.forEach((yamlManifest) => {
+          new Manifest(this, "cdk8s", {
+            manifest: yamlManifest.toJSON(),
+          });
+        });
+      },
     });
   }
 }
