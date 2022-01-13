@@ -1,29 +1,48 @@
 import { Construct } from "constructs";
 import { App, TerraformStack } from "cdktf";
 import { App as CDK8sApp, Chart, ChartProps } from "cdk8s";
-import { Deployment } from "cdk8s-plus-21";
 import { CDK8sProvider } from "cdktf-cdk8s";
+import * as k8s from "./imports/k8s";
+import * as random from "./.gen/providers/random";
 
-// There seems to be a constructs version mismatch between cdktf (10.x) and cdk8s (3.x)
+interface MyChartProps extends ChartProps {
+  password: string;
+}
+
 class MyChart extends Chart {
-  constructor(scope: Construct, id: string, props: ChartProps = {}) {
-    super(scope as any, id, props);
+  constructor(scope: Construct, id: string, props: MyChartProps) {
+    super(scope, id, props);
 
     const labels = { app: "test" };
-    const deployment = new Deployment(this, "deployment", {
+    new k8s.KubeDeployment(this, "deployment", {
       metadata: {
         labels,
         namespace: "default",
       },
-      podMetadata: {
-        labels,
+      spec: {
+        selector: {
+          matchLabels: labels,
+        },
+        template: {
+          metadata: {
+            labels,
+          },
+          spec: {
+            containers: [
+              {
+                name: "nginx",
+                image: "nginx:latest",
+                env: [
+                  {
+                    name: "password",
+                    value: props.password,
+                  },
+                ],
+              },
+            ],
+          },
+        },
       },
-      volumes: [],
-    });
-    deployment.addContainer({
-      image: "nginx:latest",
-      env: {},
-      port: 80,
     });
   }
 }
@@ -31,17 +50,20 @@ class MyChart extends Chart {
 class MyStack extends TerraformStack {
   constructor(scope: Construct, name: string) {
     super(scope, name);
+    new random.RandomProvider(this, "random", {});
+
+    const password = new random.Password(this, "terraform-password", {
+      length: 42,
+    });
 
     const cdk8s = new CDK8sApp();
-    new MyChart(cdk8s as any, "chart");
+    new MyChart(cdk8s, "chart", { password: password.result });
 
     new CDK8sProvider(this, "cdk8s-provider", {
       cdk8sApp: cdk8s,
       configContext: "kind-kind",
       configPath: "~/.kube/config",
     });
-
-    // define resources here
   }
 }
 
