@@ -17,7 +17,9 @@
     "package": "npx projen package",
     "package-all": "npx projen package-all",
     "package:js": "npx projen package:js",
+    "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
+    "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
     "test": "npx projen test",
@@ -37,7 +39,7 @@
   "devDependencies": {
     "@cdktf/provider-kubernetes": "0.5.129",
     "@dschmidt/cdktf-construct-base": "0.0.6",
-    "@types/jest": "*",
+    "@types/jest": "^27.4.0",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
@@ -49,13 +51,13 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.5.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.4.5",
+    "jest": "^27.4.7",
     "jest-junit": "^13",
-    "jsii": "^1.50.0",
-    "jsii-diff": "^1.50.0",
-    "jsii-docgen": "^4.2.22",
+    "jsii": "^1.52.1",
+    "jsii-diff": "^1.52.1",
+    "jsii-docgen": "^4.2.39",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.5.1",
@@ -94,6 +96,7 @@
       "json",
       "lcov",
       "clover",
+      "cobertura",
       "text"
     ],
     "coverageDirectory": "coverage",
@@ -128,7 +131,12 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "cdktf-cdk8s",
+        "module": "cdktf_cdk8s"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"

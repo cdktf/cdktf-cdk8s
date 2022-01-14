@@ -135,6 +135,9 @@
       "steps": [
         {
           "spawn": "package:js"
+        },
+        {
+          "spawn": "package:python"
         }
       ]
     },
@@ -150,6 +153,18 @@
         }
       ]
     },
+    "package:python": {
+      "name": "package:python",
+      "description": "Create python language bindings",
+      "steps": [
+        {
+          "exec": "jsii_version=$(node -p \"JSON.parse(fs.readFileSync('.jsii')).jsiiVersion.split(' ')[0]\")"
+        },
+        {
+          "exec": "npx jsii-pacmak@$jsii_version -v --target python"
+        }
+      ]
+    },
     "post-compile": {
       "name": "post-compile",
       "description": "Runs after successful compilation",
@@ -158,6 +173,10 @@
           "spawn": "docgen"
         }
       ]
+    },
+    "post-upgrade": {
+      "name": "post-upgrade",
+      "description": "Runs after upgrading dependencies"
     },
     "pre-compile": {
       "name": "pre-compile",
@@ -265,6 +284,9 @@
         },
         {
           "exec": "npx projen"
+        },
+        {
+          "spawn": "post-upgrade"
         }
       ]
     },
@@ -298,6 +320,9 @@
         },
         {
           "exec": "npx projen"
+        },
+        {
+          "spawn": "post-upgrade"
         }
       ]
     },
