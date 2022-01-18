@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@cdktf/provider-kubernetes": "0.5.129",
-    "@dschmidt/cdktf-construct-base": "0.0.13",
+    "@dschmidt/cdktf-construct-base": "0.0.14",
     "@types/jest": "^27.4.0",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -57,7 +57,7 @@
     "jest-junit": "^13",
     "jsii": "^1.52.1",
     "jsii-diff": "^1.52.1",
-    "jsii-docgen": "^4.2.42",
+    "jsii-docgen": "^4.2.43",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.5.1",
