@@ -25,7 +25,7 @@
     "node": ">=10.12"
   },
   "dependencies": {
-    "cdktf": "^0.8.6",
+    "cdktf": "^0.9.0",
     "constructs": "^10.0.30",
     "@cdktf/provider-kubernetes": "latest",
     "cdktf-cdk8s": "latest",
