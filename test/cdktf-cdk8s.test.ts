@@ -40,7 +40,8 @@ describe("CDK8sProvider", () => {
       "{
         \\"provider\\": {
           \\"kubernetes\\": [
-            {}
+            {
+            }
           ]
         },
         \\"resource\\": {
