@@ -25,8 +25,8 @@ export class CDK8sProvider extends KubernetesProvider {
           config.cdk8sApp.synthYaml()
         );
 
-        yamlManifests.forEach((yamlManifest) => {
-          new Manifest(this, "cdk8s", {
+        yamlManifests.forEach((yamlManifest, index) => {
+          new Manifest(this, `${id}-manifest-${index}`, {
             manifest: yamlManifest.toJSON(),
           });
         });
