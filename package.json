@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@cdktf/provider-kubernetes": "0.6.0",
-    "@dschmidt/cdktf-construct-base": "0.0.25",
+    "@dschmidt/cdktf-construct-base": "0.0.26",
     "@types/jest": "^27.4.0",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
