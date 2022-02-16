@@ -68,8 +68,7 @@ export class CDK8sProvider extends KubernetesProvider {
             jsonManifest.metadata.name || jsonManifest.metadata.generateName
           }-${namespace}`;
           const manifest = wrapLeafStringKeys(jsonManifest);
-          console.log("jsonManifest", JSON.stringify(jsonManifest));
-          console.log("manifest", JSON.stringify(manifest));
+
           new Manifest(this, `${id}-${type}-${uniqueId}`, {
             manifest,
           });
