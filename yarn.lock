@@ -298,10 +298,10 @@
   resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-0.6.0.tgz#8084f3d9f2f0aba4120d4eb6a4b8cfa166fd4c77"
   integrity sha512-GPFI4UJAbnHMW1XWfP9kuFehzpMLGzZ683lSDXvDwVJtNPIBdaf7ILYc0DLTuxpl4jg0FwJvbmQ9ZKrz7aQKNg==
 
-"@dschmidt/cdktf-construct-base@0.0.71":
-  version "0.0.71"
-  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.71.tgz#131c867ab54ded5c4fe59129a566fe54a76fbdc9"
-  integrity sha512-I5j/w9Sj3zvKgaFRPHAwOvMnWHHVE57I0kepRS6F+mGBgA17x8LsMb8BwuT1foAUr7JqGxd8jdiCtMxvxuwEiw==
+"@dschmidt/cdktf-construct-base@0.0.72":
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.72.tgz#ba0226f12bd9a1c048f77a07dcdbbc03ca9160fb"
+  integrity sha512-eaSa8qwsBWcLNcMJ80+tiMFo/p+V1OfhVGAdEG9+lg3KGxphXD6sZkAVqvof/0zmNfiC6+YrxOdjWdFIVhEh3A==
   dependencies:
     projen "^0.50.9"
 
@@ -1420,9 +1420,9 @@ camelcase@^6.2.0, camelcase@^6.3.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001317:
-  version "1.0.30001317"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001317.tgz#0548fb28fd5bc259a70b8c1ffdbe598037666a1b"
-  integrity sha512-xIZLh8gBm4dqNX0gkzrBeyI86J2eCjWzYAs40q88smG844YIrN4tVQl/RhquHvKEKImWWFIVh1Lxe5n1G/N+GQ==
+  version "1.0.30001319"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001319.tgz#eb4da4eb3ecdd409f7ba1907820061d56096e88f"
+  integrity sha512-xjlIAFHucBRSMUo1kb5D4LYgcN1M45qdKP++lhqowDpwJwGkpIRTt5qQqnhxjj1vHcI7nrJxWhCC1ATrCEBTcw==
 
 case@^1.6.3:
   version "1.6.3"
