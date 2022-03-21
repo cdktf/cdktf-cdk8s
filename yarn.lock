@@ -298,10 +298,10 @@
   resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-0.6.0.tgz#8084f3d9f2f0aba4120d4eb6a4b8cfa166fd4c77"
   integrity sha512-GPFI4UJAbnHMW1XWfP9kuFehzpMLGzZ683lSDXvDwVJtNPIBdaf7ILYc0DLTuxpl4jg0FwJvbmQ9ZKrz7aQKNg==
 
-"@dschmidt/cdktf-construct-base@0.0.72":
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.72.tgz#ba0226f12bd9a1c048f77a07dcdbbc03ca9160fb"
-  integrity sha512-eaSa8qwsBWcLNcMJ80+tiMFo/p+V1OfhVGAdEG9+lg3KGxphXD6sZkAVqvof/0zmNfiC6+YrxOdjWdFIVhEh3A==
+"@dschmidt/cdktf-construct-base@0.0.73":
+  version "0.0.73"
+  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.73.tgz#8ccacd187f80db4d5d9fcfaa317acca552d38407"
+  integrity sha512-qX551ZQSvZnbdPbKHQ9oRRs5rpeAH7jJcexsryOjIFU3E/47xtogYEGc389noNjvB5O2a/qCRxvM6aJz215LUw==
   dependencies:
     projen "^0.50.9"
 
@@ -715,9 +715,9 @@
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
-  version "7.1.18"
-  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.18.tgz#1a29abcc411a9c05e2094c98f9a1b7da6cdf49f8"
-  integrity sha512-S7unDjm/C7z2A2R9NzfKCK1I+BAALDtxEmsJBwlB3EzNfb929ykjL++1CK9LO++EIp2fQrC8O+BwjKvz6UeDyQ==
+  version "7.1.19"
+  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.19.tgz#7b497495b7d1b4812bdb9d02804d0576f43ee460"
+  integrity sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
