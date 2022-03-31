@@ -1,4 +1,4 @@
-const { CDKTFConstruct } = require("@dschmidt/cdktf-construct-base");
+import { CDKTFConstruct } from "@dschmidt/cdktf-construct-base";
 const project = new CDKTFConstruct({
   author: "Daniel Schmidt",
   authorAddress: "danielmschmidt92@gmail.com",
@@ -19,6 +19,7 @@ const project = new CDKTFConstruct({
   // release: undefined,      /* Add release management to this project. */
   license: "MIT",
   eslintOptions: {
+    dirs: ["src"],
     ignorePatterns: ["**/node_modules/**", "**/test/imports/**"],
   },
 });

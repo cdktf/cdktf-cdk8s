@@ -37,7 +37,9 @@
   },
   "ignorePatterns": [
     "**/node_modules/**",
-    "**/test/imports/**"
+    "**/test/imports/**",
+    "!.projenrc.ts",
+    "!projenrc/**/*.ts"
   ],
   "rules": {
     "prettier/prettier": [
@@ -51,7 +53,9 @@
       {
         "devDependencies": [
           "**/test/**",
-          "**/build-tools/**"
+          "**/build-tools/**",
+          ".projenrc.ts",
+          "projenrc/**/*.ts"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
