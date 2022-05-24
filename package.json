@@ -38,15 +38,15 @@
   },
   "devDependencies": {
     "@cdktf/provider-kubernetes": "0.6.0",
-    "@dschmidt/cdktf-construct-base": "0.0.91",
-    "@types/jest": "^27.4.1",
+    "@dschmidt/cdktf-construct-base": "0.0.140",
+    "@types/jest": "^27.5.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "cdk8s": "2.1.6",
-    "cdk8s-cli": "1.0.143",
-    "cdktf": "0.9.0",
-    "constructs": "10.0.25",
+    "cdk8s-cli": "1.1.6",
+    "cdktf": "0.10.1",
+    "constructs": "10.0.107",
     "eslint": "^8",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-node": "^0.3.6",
@@ -55,23 +55,23 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
     "jest-junit": "^13",
-    "jsii": "^1.55.1",
-    "jsii-diff": "^1.55.1",
+    "jsii": "^1.59.0",
+    "jsii-diff": "^1.59.0",
     "jsii-docgen": "^4.2.44",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
     "projen": "^0.46.3",
     "standard-version": "^9",
-    "ts-jest": "^27.1.4",
+    "ts-jest": "^27.1.5",
     "ts-node": "^9",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.4"
   },
   "peerDependencies": {
     "@cdktf/provider-kubernetes": ">=0.6.0",
     "cdk8s": ">=2.1.6",
-    "cdktf": "^0.9.0",
-    "constructs": "^10.0.25"
+    "cdktf": "^0.10.1",
+    "constructs": "^10.0.107"
   },
   "dependencies": {
     "yaml": "1.10.2"
