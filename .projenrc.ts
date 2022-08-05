@@ -7,9 +7,9 @@ const project = new CDKTFConstruct({
   repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-cdk8s.git",
   bundledDeps: ["yaml@1.10.2"],
   peerDeps: [
-    "@cdktf/provider-kubernetes@>=0.6.0",
+    "@cdktf/provider-kubernetes@>=2.0.0",
     "cdk8s@>=2.1.6",
-    "cdktf@>=0.9.0",
+    "cdktf@>=0.12.0",
   ],
   devDeps: ["@dschmidt/cdktf-construct-base", "cdk8s-cli"],
   description:
@@ -27,5 +27,7 @@ const project = new CDKTFConstruct({
 project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
 );
+
+project.addDevDeps("ts-node@10.9.1");
 
 project.synth();
