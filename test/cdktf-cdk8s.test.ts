@@ -89,7 +89,7 @@ describe("CDK8sProvider", () => {
           \\"required_providers\\": {
             \\"kubernetes\\": {
               \\"source\\": \\"kubernetes\\",
-              \\"version\\": \\"~> 2.0\\"
+              \\"version\\": \\"2.12.1\\"
             }
           }
         }
@@ -259,7 +259,7 @@ describe("CDK8sProvider", () => {
           \\"required_providers\\": {
             \\"kubernetes\\": {
               \\"source\\": \\"kubernetes\\",
-              \\"version\\": \\"~> 2.0\\"
+              \\"version\\": \\"2.12.1\\"
             }
           }
         }
@@ -353,7 +353,7 @@ describe("CDK8sProvider", () => {
           \\"required_providers\\": {
             \\"kubernetes\\": {
               \\"source\\": \\"kubernetes\\",
-              \\"version\\": \\"~> 2.0\\"
+              \\"version\\": \\"2.12.1\\"
             }
           }
         }
