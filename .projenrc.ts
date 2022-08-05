@@ -28,4 +28,6 @@ project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
 );
 
+project.addDevDeps("ts-node@10.9.1");
+
 project.synth();
