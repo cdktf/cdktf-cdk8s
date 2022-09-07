@@ -15,9 +15,7 @@ export interface CDK8sProviderConfig extends KubernetesProviderConfig {
 // TODO: Offer option that base64 encodes the strings and wraps them in btoa
 // TODO: Order Terraform Manifests
 function wrapLeafStringKeys(object: any): any {
-  console.log("wrapLeafStringKeys", object);
   if (typeof object === "string") {
-    console.log(object, object.replace(/\n/g, "\\n").replace(/\${/g, "$$${"));
     return object
       .replace(/\n/g, "\\n") // escape newlines
       .replace(/\${/g, "$$${"); // escape ${ to $${;
@@ -44,7 +42,6 @@ function wrapLeafStringKeys(object: any): any {
     }
     return { ...acc, [key]: value };
   }, {} as Record<string, any>);
-  console.log("ret", ret);
   return ret;
 }
 export class CDK8sProvider extends KubernetesProvider {
