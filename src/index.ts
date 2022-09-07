@@ -47,6 +47,7 @@ function wrapLeafStringKeys(object: any): any {
 export class CDK8sProvider extends KubernetesProvider {
   constructor(scope: Construct, id: string, config: CDK8sProviderConfig) {
     super(scope, id, config);
+    this.alias = `cdktf-cdk8s-${id}`;
 
     Aspects.of(scope).add({
       visit: (node: IConstruct) => {

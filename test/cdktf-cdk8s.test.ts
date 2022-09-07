@@ -41,6 +41,7 @@ describe("CDK8sProvider", () => {
         \\"provider\\": {
           \\"kubernetes\\": [
             {
+              \\"alias\\": \\"cdktf-cdk8s-cdk8s-provider\\"
             }
           ]
         },
@@ -164,6 +165,7 @@ describe("CDK8sProvider", () => {
         \\"provider\\": {
           \\"kubernetes\\": [
             {
+              \\"alias\\": \\"cdktf-cdk8s-cdk8s-provider\\"
             }
           ]
         },
@@ -305,6 +307,7 @@ describe("CDK8sProvider", () => {
         \\"provider\\": {
           \\"kubernetes\\": [
             {
+              \\"alias\\": \\"cdktf-cdk8s-cdk8s-provider\\"
             }
           ]
         },
@@ -334,6 +337,146 @@ describe("CDK8sProvider", () => {
                       \\"containers\\": [
                         {
                           \\"image\\": \\"pau$\${var.notTerraformJustLooksLikeIt}lbouwer/hello-kubernetes:1.7\\",
+                          \\"name\\": \\"hello-kubernetes\\",
+                          \\"ports\\": [
+                            {
+                              \\"containerPort\\": 8080
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        \\"terraform\\": {
+          \\"required_providers\\": {
+            \\"kubernetes\\": {
+              \\"source\\": \\"kubernetes\\",
+              \\"version\\": \\"2.12.1\\"
+            }
+          }
+        }
+      }"
+    `);
+  });
+
+  test("can use multiple against different clusters", () => {
+    expect(
+      Testing.synthScope((scope) => {
+        const cdk8sApp = new App();
+        const chart = new Chart(cdk8sApp, "chart");
+        const label = { app: "test" };
+        new KubeDeployment(chart, "deployment", {
+          spec: {
+            replicas: 1,
+            selector: {
+              matchLabels: label,
+            },
+
+            template: {
+              metadata: { labels: label },
+              spec: {
+                containers: [
+                  {
+                    name: "hello-kubernetes",
+                    image: "paulbouwer/hello-kubernetes:1.7",
+                    ports: [{ containerPort: 8080 }],
+                  },
+                ],
+              },
+            },
+          },
+        });
+
+        new CDK8sProvider(scope, "cdk8s-provider", {
+          cdk8sApp,
+        });
+
+        new CDK8sProvider(scope, "cdk8s-provider-2", {
+          cdk8sApp,
+          configContext: "my-other-context",
+        });
+      })
+    ).toMatchInlineSnapshot(`
+      "{
+        \\"provider\\": {
+          \\"kubernetes\\": [
+            {
+              \\"alias\\": \\"cdktf-cdk8s-cdk8s-provider\\"
+            },
+            {
+              \\"alias\\": \\"cdktf-cdk8s-cdk8s-provider-2\\",
+              \\"config_context\\": \\"my-other-context\\"
+            }
+          ]
+        },
+        \\"resource\\": {
+          \\"kubernetes_manifest\\": {
+            \\"cdk8s-provider-2_cdk8s-provider-2-apps--v1-Deployment-chart-deployment-c8b75089-default_03050E76\\": {
+              \\"manifest\\": {
+                \\"apiVersion\\": \\"apps/v1\\",
+                \\"kind\\": \\"Deployment\\",
+                \\"metadata\\": {
+                  \\"name\\": \\"chart-deployment-c8b75089\\"
+                },
+                \\"spec\\": {
+                  \\"replicas\\": 1,
+                  \\"selector\\": {
+                    \\"matchLabels\\": {
+                      \\"app\\": \\"test\\"
+                    }
+                  },
+                  \\"template\\": {
+                    \\"metadata\\": {
+                      \\"labels\\": {
+                        \\"app\\": \\"test\\"
+                      }
+                    },
+                    \\"spec\\": {
+                      \\"containers\\": [
+                        {
+                          \\"image\\": \\"paulbouwer/hello-kubernetes:1.7\\",
+                          \\"name\\": \\"hello-kubernetes\\",
+                          \\"ports\\": [
+                            {
+                              \\"containerPort\\": 8080
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            \\"cdk8s-provider_cdk8s-provider-apps--v1-Deployment-chart-deployment-c8b75089-default_ABFFC36F\\": {
+              \\"manifest\\": {
+                \\"apiVersion\\": \\"apps/v1\\",
+                \\"kind\\": \\"Deployment\\",
+                \\"metadata\\": {
+                  \\"name\\": \\"chart-deployment-c8b75089\\"
+                },
+                \\"spec\\": {
+                  \\"replicas\\": 1,
+                  \\"selector\\": {
+                    \\"matchLabels\\": {
+                      \\"app\\": \\"test\\"
+                    }
+                  },
+                  \\"template\\": {
+                    \\"metadata\\": {
+                      \\"labels\\": {
+                        \\"app\\": \\"test\\"
+                      }
+                    },
+                    \\"spec\\": {
+                      \\"containers\\": [
+                        {
+                          \\"image\\": \\"paulbouwer/hello-kubernetes:1.7\\",
                           \\"name\\": \\"hello-kubernetes\\",
                           \\"ports\\": [
                             {
