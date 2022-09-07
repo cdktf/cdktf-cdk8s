@@ -70,8 +70,6 @@ const cDK8sProviderConfig: CDK8sProviderConfig = { ... }
 | [`exec`](#cdktfcdk8scdk8sproviderconfigpropertyexec) | [`@cdktf/provider-kubernetes.KubernetesProviderExec`](#@cdktf/provider-kubernetes.KubernetesProviderExec) | exec block. |
 | [`experiments`](#cdktfcdk8scdk8sproviderconfigpropertyexperiments) | [`@cdktf/provider-kubernetes.KubernetesProviderExperiments`](#@cdktf/provider-kubernetes.KubernetesProviderExperiments) | experiments block. |
 | [`host`](#cdktfcdk8scdk8sproviderconfigpropertyhost) | `string` | The hostname (in form of URI) of Kubernetes master. |
-| [`ignoreAnnotations`](#cdktfcdk8scdk8sproviderconfigpropertyignoreannotations) | `string`[] | List of Kubernetes metadata annotations to ignore across all resources handled by this provider for situations where external systems are managing certain resource annotations. |
-| [`ignoreLabels`](#cdktfcdk8scdk8sproviderconfigpropertyignorelabels) | `string`[] | List of Kubernetes metadata labels to ignore across all resources handled by this provider for situations where external systems are managing certain resource labels. |
 | [`insecure`](#cdktfcdk8scdk8sproviderconfigpropertyinsecure) | `boolean` \| [`cdktf.IResolvable`](#cdktf.IResolvable) | Whether server should be accessed without verifying the TLS certificate. |
 | [`password`](#cdktfcdk8scdk8sproviderconfigpropertypassword) | `string` | The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint. |
 | [`proxyUrl`](#cdktfcdk8scdk8sproviderconfigpropertyproxyurl) | `string` | URL to the proxy to be used for all API requests. |
@@ -240,34 +238,6 @@ public readonly host: string;
 The hostname (in form of URI) of Kubernetes master.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/kubernetes#host KubernetesProvider#host}
-
----
-
-##### `ignoreAnnotations`<sup>Optional</sup> <a name="cdktf-cdk8s.CDK8sProviderConfig.property.ignoreAnnotations" id="cdktfcdk8scdk8sproviderconfigpropertyignoreannotations"></a>
-
-```typescript
-public readonly ignoreAnnotations: string[];
-```
-
-- *Type:* `string`[]
-
-List of Kubernetes metadata annotations to ignore across all resources handled by this provider for situations where external systems are managing certain resource annotations.
-
-Each item is a regular expression.  Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/kubernetes#ignore_annotations KubernetesProvider#ignore_annotations}
-
----
-
-##### `ignoreLabels`<sup>Optional</sup> <a name="cdktf-cdk8s.CDK8sProviderConfig.property.ignoreLabels" id="cdktfcdk8scdk8sproviderconfigpropertyignorelabels"></a>
-
-```typescript
-public readonly ignoreLabels: string[];
-```
-
-- *Type:* `string`[]
-
-List of Kubernetes metadata labels to ignore across all resources handled by this provider for situations where external systems are managing certain resource labels.
-
-Each item is a regular expression.  Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/kubernetes#ignore_labels KubernetesProvider#ignore_labels}
 
 ---
 
