@@ -6,12 +6,7 @@ const project = new CDKTFConstruct({
   name: "cdktf-cdk8s",
   repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-cdk8s.git",
   bundledDeps: ["yaml@1.10.2"],
-  peerDeps: [
-    "@cdktf/provider-kubernetes@>=2.0.0",
-    "cdk8s@>=2.1.6",
-    "cdktf@>=0.12.0",
-  ],
-  devDeps: ["@dschmidt/cdktf-construct-base", "cdk8s-cli"],
+
   description:
     "A compatability layer for using cdk8s constructs within Terraform CDK." /* The description is just a string that helps people understand the purpose of the package. */,
   // devDeps: [],             /* Build dependencies for this module. */
@@ -23,6 +18,14 @@ const project = new CDKTFConstruct({
     ignorePatterns: ["**/node_modules/**", "**/test/imports/**"],
   },
 });
+
+project.addPeerDeps(
+  "@cdktf/provider-kubernetes@>=2.0.0",
+  "cdk8s@>=2.1.6",
+  "cdktf@>=0.12.0"
+);
+
+project.addDevDeps("@dschmidt/cdktf-construct-base", "cdk8s-cli@>=2.0");
 
 project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
