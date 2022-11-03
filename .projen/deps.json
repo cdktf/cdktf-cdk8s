@@ -106,7 +106,7 @@
     },
     {
       "name": "npm-check-updates",
-      "version": "^15",
+      "version": "^16",
       "type": "build"
     },
     {
@@ -140,6 +140,11 @@
       "name": "yaml",
       "version": "1.10.2",
       "type": "bundled"
+    },
+    {
+      "name": "@types/prettier",
+      "version": "2.6.0",
+      "type": "override"
     },
     {
       "name": "@cdktf/provider-kubernetes",
