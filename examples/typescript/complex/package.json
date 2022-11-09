@@ -25,12 +25,12 @@
     "node": ">=10.12"
   },
   "dependencies": {
-    "@cdktf/provider-kubernetes": "latest",
-    "@cdktf/provider-random": "2.0.50",
+    "@cdktf/provider-kubernetes": "3.0.13",
+    "@cdktf/provider-random": "3.0.11",
     "cdk8s": "^2.5.38",
     "cdk8s-plus-22": "^2.0.0-rc.158",
     "cdktf": "^0.13.3",
-    "cdktf-cdk8s": "latest",
+    "cdktf-cdk8s": "0.4.2",
     "constructs": "^10.0.30"
   },
   "devDependencies": {
