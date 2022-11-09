@@ -17,12 +17,13 @@ const project = new CDKTFConstruct({
     dirs: ["src"],
     ignorePatterns: ["**/node_modules/**", "**/test/imports/**"],
   },
+  docgen: false,
 });
 
 project.addPeerDeps(
-  "@cdktf/provider-kubernetes@>=2.0.0",
+  "@cdktf/provider-kubernetes@>=3.0.0",
   "cdk8s@>=2.1.6",
-  "cdktf@>=0.12.0"
+  "cdktf@>=0.13.3"
 );
 
 project.addDevDeps("@dschmidt/cdktf-construct-base", "cdk8s-cli@>=2.0");

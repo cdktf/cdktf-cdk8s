@@ -1,14 +1,10 @@
-import {
-  KubernetesProvider,
-  KubernetesProviderConfig,
-  Manifest,
-} from "@cdktf/provider-kubernetes";
+import { provider, manifest } from "@cdktf/provider-kubernetes";
 import { App } from "cdk8s";
 import { Aspects } from "cdktf";
 import { Construct, IConstruct } from "constructs";
 import * as yaml from "yaml";
 
-export interface CDK8sProviderConfig extends KubernetesProviderConfig {
+export interface CDK8sProviderConfig extends provider.KubernetesProviderConfig {
   readonly cdk8sApp: App;
 }
 
@@ -44,7 +40,7 @@ function wrapLeafStringKeys(object: any): any {
   }, {} as Record<string, any>);
   return ret;
 }
-export class CDK8sProvider extends KubernetesProvider {
+export class CDK8sProvider extends provider.KubernetesProvider {
   constructor(scope: Construct, id: string, config: CDK8sProviderConfig) {
     super(scope, id, config);
     this.alias = `cdktf-cdk8s-${id}`;
@@ -65,10 +61,10 @@ export class CDK8sProvider extends KubernetesProvider {
           const uniqueId = `${
             jsonManifest.metadata.name || jsonManifest.metadata.generateName
           }-${namespace}`;
-          const manifest = wrapLeafStringKeys(jsonManifest);
+          const manifestContent = wrapLeafStringKeys(jsonManifest);
 
-          new Manifest(this, `${id}-${type}-${uniqueId}`, {
-            manifest,
+          new manifest.Manifest(this, `${id}-${type}-${uniqueId}`, {
+            manifest: manifestContent,
           });
         });
       },

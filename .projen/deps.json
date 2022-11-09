@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@cdktf/provider-kubernetes",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "type": "build"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "name": "cdktf",
-      "version": "0.12.0",
+      "version": "0.13.3",
       "type": "build"
     },
     {
@@ -90,10 +90,6 @@
     },
     {
       "name": "jsii-diff",
-      "type": "build"
-    },
-    {
-      "name": "jsii-docgen",
       "type": "build"
     },
     {
@@ -148,7 +144,7 @@
     },
     {
       "name": "@cdktf/provider-kubernetes",
-      "version": ">=2.0.0",
+      "version": ">=3.0.0",
       "type": "peer"
     },
     {
@@ -158,7 +154,7 @@
     },
     {
       "name": "cdktf",
-      "version": ">=0.12.0",
+      "version": ">=0.13.3",
       "type": "peer"
     },
     {
