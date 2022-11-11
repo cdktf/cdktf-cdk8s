@@ -64,6 +64,7 @@ export class CDK8sProvider extends provider.KubernetesProvider {
           const manifestContent = wrapLeafStringKeys(jsonManifest);
 
           new manifest.Manifest(this, `${id}-${type}-${uniqueId}`, {
+            provider: this,
             manifest: manifestContent,
           });
         });
