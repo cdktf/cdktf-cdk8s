@@ -82,7 +82,8 @@ describe("CDK8sProvider", () => {
                     }
                   }
                 }
-              }
+              },
+              \\"provider\\": \\"kubernetes.cdktf-cdk8s-cdk8s-provider\\"
             }
           }
         },
@@ -206,7 +207,8 @@ describe("CDK8sProvider", () => {
                     }
                   }
                 }
-              }
+              },
+              \\"provider\\": \\"kubernetes.cdktf-cdk8s-cdk8s-provider\\"
             },
             \\"cdk8s-provider_cdk8s-provider-apps--v1-Deployment-chart-deployment2-c898e6fb-my-namespace_65896BBD\\": {
               \\"manifest\\": {
@@ -244,7 +246,8 @@ describe("CDK8sProvider", () => {
                     }
                   }
                 }
-              }
+              },
+              \\"provider\\": \\"kubernetes.cdktf-cdk8s-cdk8s-provider\\"
             },
             \\"cdk8s-provider_cdk8s-provider-v1-Namespace-my-namespace-default_BA2401B1\\": {
               \\"manifest\\": {
@@ -253,7 +256,8 @@ describe("CDK8sProvider", () => {
                 \\"metadata\\": {
                   \\"name\\": \\"my-namespace\\"
                 }
-              }
+              },
+              \\"provider\\": \\"kubernetes.cdktf-cdk8s-cdk8s-provider\\"
             }
           }
         },
@@ -348,7 +352,8 @@ describe("CDK8sProvider", () => {
                     }
                   }
                 }
-              }
+              },
+              \\"provider\\": \\"kubernetes.cdktf-cdk8s-cdk8s-provider\\"
             }
           }
         },
@@ -451,7 +456,8 @@ describe("CDK8sProvider", () => {
                     }
                   }
                 }
-              }
+              },
+              \\"provider\\": \\"kubernetes.cdktf-cdk8s-cdk8s-provider-2\\"
             },
             \\"cdk8s-provider_cdk8s-provider-apps--v1-Deployment-chart-deployment-c8b75089-default_ABFFC36F\\": {
               \\"manifest\\": {
@@ -488,7 +494,8 @@ describe("CDK8sProvider", () => {
                     }
                   }
                 }
-              }
+              },
+              \\"provider\\": \\"kubernetes.cdktf-cdk8s-cdk8s-provider\\"
             }
           }
         },
