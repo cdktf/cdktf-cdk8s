@@ -3,7 +3,8 @@ import { App, TerraformStack, TerraformOutput } from "cdktf";
 import { App as CDK8sApp, Chart, ChartProps } from "cdk8s";
 import { CDK8sProvider } from "cdktf-cdk8s";
 import * as kplus from "cdk8s-plus-22";
-import * as random from "@cdktf/provider-random";
+import { RandomProvider } from "@cdktf/provider-random/lib/provider";
+import { Pet } from "@cdktf/provider-random/lib/pet";
 
 interface MyChartProps extends ChartProps {
   podName: string;
@@ -40,17 +41,17 @@ class MyStack extends TerraformStack {
   constructor(scope: Construct, name: string) {
     super(scope, name);
 
-    new random.RandomProvider(this, "random");
+    new RandomProvider(this, "random");
 
     const cdk8s = new CDK8sApp();
     const chart = new PodWithMountedAppDirChart(cdk8s, "config-map-example", {
-      podName: new random.Pet(this, "chart-pet-name").id, // Can use values from the CDKTF context
+      podName: new Pet(this, "chart-pet-name").id, // Can use values from the CDKTF context
       directory: "./imports", // We don't use TerraformAsset here since the read values are inlined in the configuration
     });
 
     // Multiple charts of the same kind can be configured in a CDK8s app
     new PodWithMountedAppDirChart(cdk8s, "another-config-map-example", {
-      podName: new random.Pet(this, "another-chart-pet-name").id,
+      podName: new Pet(this, "another-chart-pet-name").id,
       directory: "./node_modules/cdktf",
     });
 

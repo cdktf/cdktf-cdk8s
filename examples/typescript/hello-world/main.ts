@@ -3,7 +3,8 @@ import { App, TerraformStack } from "cdktf";
 import { App as CDK8sApp, Chart, ChartProps } from "cdk8s";
 import { CDK8sProvider } from "cdktf-cdk8s";
 import * as k8s from "./imports/k8s";
-import * as random from "./.gen/providers/random";
+import { RandomProvider } from "./.gen/providers/random/random-provider";
+import { Password } from "./.gen/providers/random/password/index";
 
 interface MyChartProps extends ChartProps {
   password: string;
@@ -50,9 +51,9 @@ class MyChart extends Chart {
 class MyStack extends TerraformStack {
   constructor(scope: Construct, name: string) {
     super(scope, name);
-    new random.RandomProvider(this, "random", {});
+    new RandomProvider(this, "random", {});
 
-    const password = new random.Password(this, "terraform-password", {
+    const password = new Password(this, "terraform-password", {
       length: 42,
     });
 
