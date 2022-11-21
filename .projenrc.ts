@@ -6,7 +6,10 @@ const project = new CDKTFConstruct({
   name: "cdktf-cdk8s",
   repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-cdk8s.git",
   bundledDeps: ["yaml@1.10.2"],
-
+  workflowGitIdentity: {
+    name: "team-tf-cdk",
+    email: "github-team-tf-cdk@hashicorp.com",
+  },
   description:
     "A compatability layer for using cdk8s constructs within Terraform CDK." /* The description is just a string that helps people understand the purpose of the package. */,
   // devDeps: [],             /* Build dependencies for this module. */
