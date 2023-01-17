@@ -291,10 +291,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-kubernetes@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-3.0.0.tgz#55ca57db3bed84d65753a7499f923c553aecffa4"
-  integrity sha512-3GBT5Z/l16tHGKU+DkeFP3jVAs1aat+HdybG4Bm8lVNCH+8IxPCGN/8/iRACWh9d+2K6gUUAx9cp+qOzeznYJw==
+"@cdktf/provider-kubernetes@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-5.0.0.tgz#ab09104f54c5d7c55ca10ffc3edefa543f9faaf1"
+  integrity sha512-kRiH5ZZWo0Ch2Aa9Et3cKH2Apv2TLHFM6NF0KXfnZzheA6RJxALnPtxmoPFuJ+Scz3I2sCI0vdINhHNFj99sKw==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -1630,14 +1630,14 @@ cdk8s@^2.6.20:
     follow-redirects "^1.15.2"
     yaml "2.0.0-7"
 
-cdktf@0.13.3:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.13.3.tgz#ee632dc211cb40af60f7fbb6c71bcd2cd74a90d8"
-  integrity sha512-uDNW+vKtJRZY+NaM3vsQX8lIVOkjC6AxMgx2HI3zvTCb60wI1DfEHr5ET/UCzZfrY1vQXY8ZYNhP4rxeCzW6AA==
+cdktf@0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.15.0.tgz#b1fc18586852e6431a2a9508793907a8b40834fa"
+  integrity sha512-Dzv/pfJWTFzxMxjcgI3cttK7hPLy69bUPzcZgUK0sI+k3kY4I67pmxKuXDh1XVK9AX+pCaiZT7wzQbCznTrQkQ==
   dependencies:
     archiver "5.3.1"
-    json-stable-stringify "^1.0.1"
-    semver "^7.3.7"
+    json-stable-stringify "^1.0.2"
+    semver "^7.3.8"
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -4290,7 +4290,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-json-stable-stringify@^1.0.1:
+json-stable-stringify@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-stable-stringify/-/json-stable-stringify-1.0.2.tgz#e06f23128e0bbe342dc996ed5a19e28b57b580e0"
   integrity sha512-eunSSaEnxV12z+Z73y/j5N37/In40GK4GmsSy+tEHJMxknvqnA7/djeYtAgW0GsWHUfg+847WJjKaEylk2y09g==

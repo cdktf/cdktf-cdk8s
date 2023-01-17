@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@cdktf/provider-kubernetes",
-      "version": "3.0.0",
+      "version": "5.0.0",
       "type": "build"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "name": "cdktf",
-      "version": "0.13.3",
+      "version": "0.15.0",
       "type": "build"
     },
     {
@@ -149,7 +149,7 @@
     },
     {
       "name": "@cdktf/provider-kubernetes",
-      "version": ">=3.0.0",
+      "version": ">=5.0.0",
       "type": "peer"
     },
     {
@@ -159,7 +159,7 @@
     },
     {
       "name": "cdktf",
-      "version": ">=0.13.3",
+      "version": ">=0.15.0",
       "type": "peer"
     },
     {
