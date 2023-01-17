@@ -204,7 +204,8 @@
           "exec": "cd ./test && cdk8s import k8s --language typescript"
         },
         {
-          "exec": "jest --passWithNoTests --updateSnapshot"
+          "exec": "jest --passWithNoTests --updateSnapshot",
+          "receiveArgs": true
         },
         {
           "spawn": "eslint"
