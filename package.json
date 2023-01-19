@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@cdktf/provider-kubernetes": "5.0.0",
-    "@dschmidt/cdktf-construct-base": "0.1.161",
+    "@dschmidt/cdktf-construct-base": "0.1.162",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -59,7 +59,7 @@
     "json-schema": "^0.4.0",
     "npm-check-updates": "^16",
     "prettier": "^2.8.3",
-    "projen": "^0.67.3",
+    "projen": "^0.67.5",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "10.9.1",
