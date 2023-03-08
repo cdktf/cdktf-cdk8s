@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import { CDKTFConstruct } from "@dschmidt/cdktf-construct-base";
 const project = new CDKTFConstruct({
   author: "Daniel Schmidt",

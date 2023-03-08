@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import { provider, manifest } from "@cdktf/provider-kubernetes";
 import { App } from "cdk8s";
 import { Aspects } from "cdktf";

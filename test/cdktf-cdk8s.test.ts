@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import { App, Chart } from "cdk8s";
 import { Testing } from "cdktf";
 import { KubeDeployment, KubeNamespace } from "./imports/k8s";
