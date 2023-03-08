@@ -12,5 +12,6 @@ project {
     # "**autogen**",
     "**/node_modules/**",
     ".mergify.yml",
+    "dist/**",
   ]
 }
