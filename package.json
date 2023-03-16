@@ -1,9 +1,9 @@
 {
   "name": "cdktf-cdk8s",
-  "description": "A compatability layer for using cdk8s constructs within Terraform CDK.",
+  "description": "A compatibility layer for using cdk8s constructs within Terraform CDK.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanielMSchmidt/cdktf-cdk8s.git"
+    "url": "https://github.com/cdktf/cdktf-cdk8s.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -30,9 +30,9 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Daniel Schmidt",
-    "email": "danielmschmidt92@gmail.com",
-    "organization": false
+    "name": "HashiCorp",
+    "url": "https://hashicorp.com",
+    "organization": true
   },
   "devDependencies": {
     "@cdktf/provider-kubernetes": "5.0.0",
@@ -82,7 +82,7 @@
     "cdktf"
   ],
   "main": "lib/index.js",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "version": "0.0.0",
   "jest": {
     "testMatch": [
