@@ -4,29 +4,52 @@
  */
 
 import { CDKTFConstruct } from "@dschmidt/cdktf-construct-base";
+import { IResolver, License } from "projen";
+import { TypeScriptProject } from "projen/lib/typescript";
+
+const SPDX = "MPL-2.0";
+
+class CustomizedLicense extends License {
+  constructor(project: TypeScriptProject) {
+    super(project, { spdx: SPDX });
+
+    project.addFields({ license: SPDX });
+  }
+
+  synthesizeContent(resolver: IResolver) {
+    return (
+      "Copyright (c) 2022 HashiCorp, Inc.\n\n" +
+      super.synthesizeContent(resolver)
+    );
+  }
+}
+
 const project = new CDKTFConstruct({
-  author: "Daniel Schmidt",
-  authorAddress: "danielmschmidt92@gmail.com",
+  author: "HashiCorp",
+  authorAddress: "https://hashicorp.com",
+  authorOrganization: true,
   defaultReleaseBranch: "main",
   name: "cdktf-cdk8s",
-  repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-cdk8s.git",
+  repositoryUrl: "https://github.com/cdktf/cdktf-cdk8s.git",
   bundledDeps: ["yaml@1.10.2"],
   workflowGitIdentity: {
     name: "team-tf-cdk",
     email: "github-team-tf-cdk@hashicorp.com",
   },
   description:
-    "A compatability layer for using cdk8s constructs within Terraform CDK." /* The description is just a string that helps people understand the purpose of the package. */,
+    "A compatibility layer for using cdk8s constructs within Terraform CDK." /* The description is just a string that helps people understand the purpose of the package. */,
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
   // release: undefined,      /* Add release management to this project. */
-  license: "MIT",
+  licensed: false,
   eslintOptions: {
     dirs: ["src"],
     ignorePatterns: ["**/node_modules/**", "**/test/imports/**"],
   },
   docgen: false,
 });
+
+new CustomizedLicense(project);
 
 project.addPeerDeps(
   "@cdktf/provider-kubernetes@>=5.0.0",
