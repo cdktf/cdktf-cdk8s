@@ -35,8 +35,7 @@
     "organization": true
   },
   "devDependencies": {
-    "@cdktf/provider-kubernetes": "5.0.0",
-    "@dschmidt/cdktf-construct-base": "0.1.167",
+    "@cdktf/provider-kubernetes": "6.0.0",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -44,7 +43,7 @@
     "cdk8s": "2.1.6",
     "cdk8s-cli": ">=2.0",
     "cdktf": "0.15.0",
-    "constructs": "10.0.107",
+    "constructs": "10.0.12",
     "eslint": "^8",
     "eslint-config-prettier": "^8.6.0",
     "eslint-import-resolver-node": "^0.3.7",
@@ -66,10 +65,10 @@
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "@cdktf/provider-kubernetes": ">=5.0.0",
+    "@cdktf/provider-kubernetes": ">=6.0.0",
     "cdk8s": ">=2.1.6",
     "cdktf": ">=0.15.0",
-    "constructs": "^10.0.107"
+    "constructs": "^10.0.12"
   },
   "dependencies": {
     "yaml": "1.10.2"
@@ -100,12 +99,10 @@
     ],
     "coverageDirectory": "coverage",
     "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "dist"
+      "/node_modules/"
     ],
     "testPathIgnorePatterns": [
-      "/node_modules/",
-      "dist"
+      "/node_modules/"
     ],
     "watchPathIgnorePatterns": [
       "/node_modules/"

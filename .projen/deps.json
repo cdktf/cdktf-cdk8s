@@ -2,11 +2,7 @@
   "dependencies": [
     {
       "name": "@cdktf/provider-kubernetes",
-      "version": "5.0.0",
-      "type": "build"
-    },
-    {
-      "name": "@dschmidt/cdktf-construct-base",
+      "version": "6.0.0",
       "type": "build"
     },
     {
@@ -46,7 +42,7 @@
     },
     {
       "name": "constructs",
-      "version": "10.0.107",
+      "version": "10.0.12",
       "type": "build"
     },
     {
@@ -149,7 +145,7 @@
     },
     {
       "name": "@cdktf/provider-kubernetes",
-      "version": ">=5.0.0",
+      "version": ">=6.0.0",
       "type": "peer"
     },
     {
@@ -164,7 +160,7 @@
     },
     {
       "name": "constructs",
-      "version": "^10.0.107",
+      "version": "^10.0.12",
       "type": "peer"
     }
   ],

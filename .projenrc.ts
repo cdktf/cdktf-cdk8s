@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-import { CDKTFConstruct } from "@dschmidt/cdktf-construct-base";
 import { IResolver, License } from "projen";
+import { ConstructLibraryCdktf } from "projen/lib/cdktf";
 import { TypeScriptProject } from "projen/lib/typescript";
 
 const SPDX = "MPL-2.0";
@@ -24,7 +24,7 @@ class CustomizedLicense extends License {
   }
 }
 
-const project = new CDKTFConstruct({
+const project = new ConstructLibraryCdktf({
   author: "HashiCorp",
   authorAddress: "https://hashicorp.com",
   authorOrganization: true,
@@ -47,23 +47,32 @@ const project = new CDKTFConstruct({
     ignorePatterns: ["**/node_modules/**", "**/test/imports/**"],
   },
   docgen: false,
+  cdktfVersion: "0.16.1",
+  publishToPypi: {
+    distName: "cdktf-cdk8s",
+    module: "cdktf_cdk8s",
+  },
+  autoApproveUpgrades: true,
+  autoApproveOptions: {
+    label: "auto-approve",
+  },
+  projenrcTs: true,
+  prettier: true,
 });
 
 new CustomizedLicense(project);
 
 project.addPeerDeps(
-  "@cdktf/provider-kubernetes@>=5.0.0",
+  "@cdktf/provider-kubernetes@>=6.0.0",
   "cdk8s@>=2.1.6",
   "cdktf@>=0.15.0"
 );
 
-project.addDevDeps("@dschmidt/cdktf-construct-base", "cdk8s-cli@>=2.0");
+project.addDevDeps("cdk8s-cli@>=2.0", "ts-node@10.9.1");
 
 project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
 );
-
-project.addDevDeps("ts-node@10.9.1");
 
 // Run copywrite tool to add copyright headers to all files
 project.buildWorkflow?.addPostBuildSteps(

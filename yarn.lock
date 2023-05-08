@@ -291,10 +291,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-kubernetes@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-5.0.0.tgz#ab09104f54c5d7c55ca10ffc3edefa543f9faaf1"
-  integrity sha512-kRiH5ZZWo0Ch2Aa9Et3cKH2Apv2TLHFM6NF0KXfnZzheA6RJxALnPtxmoPFuJ+Scz3I2sCI0vdINhHNFj99sKw==
+"@cdktf/provider-kubernetes@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-6.0.0.tgz#eb2b1de31f37b23792a5f7bed3ad88c8274721b2"
+  integrity sha512-/s5Gaii4WFwkibcjE3BiAN6yTa1UOvnC/Qy2RwvjKuig3hZidAe3mYualWtc0BAWj4ciCkzW82fFvQWsSrprFw==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -302,13 +302,6 @@
   integrity sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
-
-"@dschmidt/cdktf-construct-base@0.1.167":
-  version "0.1.167"
-  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.1.167.tgz#7ecf733a4598af3e56c3b51172ecb68a034bcbc0"
-  integrity sha512-s3DTkCztkWUgvGRHEHeJIF6uQVROcuYSY1783UE4mDkv222XbzyeeGmflreW6OW1NHdWbqIOJt5J7eQt39mm7w==
-  dependencies:
-    projen "^0.67.11"
 
 "@eslint/eslintrc@^1.4.1":
   version "1.4.1"
@@ -1869,10 +1862,10 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@10.0.107:
-  version "10.0.107"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.107.tgz#837c296f9b97d7663a2cddaf9771090bae296576"
-  integrity sha512-RijsrEEyjWYatW2HmKphxKT2GCNCYnabk9oGHadn+XPoqO3mpk11/uSQ6CqIuqGnCMAhnxGWBl64jaccJvpuTw==
+constructs@10.0.12:
+  version "10.0.12"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.12.tgz#64f314d87f7cdf6da127c9eb0bf6a3d990989c4a"
+  integrity sha512-wVQcQgwwK7b//7yI54/3hundmXAw7RBpuy5f6yIBFNceJr8feTK6Cs2I2f3+gp3/ikszzTouLup9AzxioEEXPQ==
 
 constructs@^10.1.229:
   version "10.1.229"
@@ -5369,7 +5362,7 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.67.11, projen@^0.67.12:
+projen@^0.67.12:
   version "0.67.12"
   resolved "https://registry.yarnpkg.com/projen/-/projen-0.67.12.tgz#5ab139439f9700859c2173ba50af20016e998e81"
   integrity sha512-s3EMtgCCW438s6TaQPN+8bbnVFMfgHOq3hwsdteyrHt7ZlMCUMM/1rJ6F5RBPQDazZw6a9JqrbWsfPZhH1kehQ==
