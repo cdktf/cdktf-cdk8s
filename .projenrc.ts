@@ -59,7 +59,7 @@ const project = new ConstructLibraryCdktf({
   },
   depsUpgradeOptions: {
     workflowOptions: {
-      labels: ["dependencies"],
+      labels: ["auto-approve", "dependencies"],
     },
   },
   projenrcTs: true,
