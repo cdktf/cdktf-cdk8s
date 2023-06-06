@@ -5,6 +5,7 @@
 
 import { IResolver, License } from "projen";
 import { ConstructLibraryCdktf } from "projen/lib/cdktf";
+import { UpgradeDependenciesSchedule } from "projen/lib/javascript"
 import { TypeScriptProject } from "projen/lib/typescript";
 
 const SPDX = "MPL-2.0";
@@ -60,6 +61,7 @@ const project = new ConstructLibraryCdktf({
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ["auto-approve", "dependencies"],
+      schedule: UpgradeDependenciesSchedule.WEEKLY,
     },
   },
   projenrcTs: true,
