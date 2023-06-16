@@ -20,3 +20,4 @@ sed -i "s/\"cdktf@>=.*\"/\"cdktf@>=$CDKTF_VERSION\"/" "$PROJECT_ROOT/.projenrc.t
 
 npx projen
 
+echo  "Please update @cdktf/provider-kubernetes in .projenrc.ts to a version compatible with cdktf $CDKTF_VERSION"
