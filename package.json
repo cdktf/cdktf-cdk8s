@@ -42,7 +42,7 @@
     "@typescript-eslint/parser": "^5",
     "cdk8s": "2.1.6",
     "cdk8s-cli": ">=2.0",
-    "cdktf": "0.16.0",
+    "cdktf": "0.17.0",
     "constructs": "10.0.25",
     "eslint": "^8",
     "eslint-config-prettier": "^8.10.0",
@@ -67,7 +67,7 @@
   "peerDependencies": {
     "@cdktf/provider-kubernetes": ">=6.0.0",
     "cdk8s": ">=2.1.6",
-    "cdktf": ">=0.16.0",
+    "cdktf": ">=0.17.0",
     "constructs": "^10.0.25"
   },
   "dependencies": {

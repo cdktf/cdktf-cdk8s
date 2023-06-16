@@ -1877,10 +1877,10 @@ cdk8s@^2.34.0:
   optionalDependencies:
     backport "8.5.0"
 
-cdktf@0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.16.0.tgz#c0da62130a3f866fb0f9219153e914ffbe07c724"
-  integrity sha512-PTU8DODmgv1U2FXKB/h4DPXE2IKB5ND9fpcaBUhEy7qFCgQVpOGdgf0w6GZVdbZ7Tiae76WSbAN10uaqrKs9wA==
+cdktf@0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.17.0.tgz#65f6fc5035c17017b23d3d26a7eb83d1db659e58"
+  integrity sha512-4R57uBLBqeb8NgfKZdn/az8UE3yXxGHyzH6Xjsz1Oo9kNvSkPibX7YqNLUpuCgdYNVgU2fdaNoHj9h4LXc6iCw==
   dependencies:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"
