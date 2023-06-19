@@ -35,4 +35,4 @@ BODY=$(cat <<EOF
 EOF
 )
 
-gh pr create --fill --base main --head "cdktf-$CDKTF_VERSION" --title "feat: update to cdktf $CDKTF_VERSION" --body "$BODY"
+gh pr create --fill --base main --head "cdktf-$CDKTF_VERSION" --title "feat: update to cdktf $CDKTF_VERSION" --body "$BODY" --label "cdktf-update-$CDKTF_VERSION"
