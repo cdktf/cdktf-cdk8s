@@ -14,6 +14,9 @@ if [ -z "$CDKTF_VERSION" ]; then
 fi
 
 echo "Updating to cdktf version $CDKTF_VERSION"
+
+git checkout -b "cdktf-$CDKTF_VERSION"
+
 cd $PROJECT_ROOT
 
 yarn
@@ -23,4 +26,13 @@ sed -i "s/\"cdktf@>=.*\"/\"cdktf@>=$CDKTF_VERSION\"/" "$PROJECT_ROOT/.projenrc.t
 
 npx projen
 
-echo  "Please update @cdktf/provider-kubernetes in .projenrc.ts to a version compatible with cdktf $CDKTF_VERSION"
+git add .
+git commit -m "feat: update to cdktf $CDKTF_VERSION"
+git push origin "cdktf-$CDKTF_VERSION"
+
+BODY=$(cat <<EOF
+- [ ] update \`@cdktf/provider-kubernetes\` in \`.projenrc.ts\` to a version compatible with cdktf $CDKTF_VERSION
+EOF
+)
+
+gh pr create --fill --base main --head "cdktf-$CDKTF_VERSION" --title "feat: update to cdktf $CDKTF_VERSION" --body "$BODY"
