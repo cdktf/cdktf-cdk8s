@@ -1,6 +1,6 @@
 # CDKTF CDK8s
 
-![Status: Tech Preview](https://img.shields.io/badge/status-experimental-EAAA32) [![Releases](https://img.shields.io/github/release/cdktf/cdktf-cdk8s.svg)](https://github.com/cdktf/cdk8s/releases)
+![Status: Tech Preview](https://img.shields.io/badge/status-experimental-EAAA32) [![Releases](https://img.shields.io/github/release/cdktf/cdktf-cdk8s.svg)](https://github.com/cdktf/cdktf-cdk8s/releases)
 [![LICENSE](https://img.shields.io/github/license/cdktf/cdktf-cdk8s.svg)](https://github.com/cdktf/cdktf-cdk8s/blob/main/LICENSE)
 [![build](https://github.com/cdktf/cdktf-cdk8s/actions/workflows/build.yml/badge.svg)](https://github.com/cdktf/cdktf-cdk8s/actions/workflows/build.yml)
 
