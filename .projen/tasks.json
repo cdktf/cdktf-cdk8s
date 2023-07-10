@@ -266,19 +266,19 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii,ts-node,yaml'"
+          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii-rosetta,jsii,ts-node,yaml'"
         },
         {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii,ts-node,yaml'"
+          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii-rosetta,jsii,ts-node,yaml'"
         },
         {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii,ts-node,yaml'"
+          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii-rosetta,jsii,ts-node,yaml'"
         },
         {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii,ts-node,yaml'"
+          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii-rosetta,jsii,ts-node,yaml'"
         },
         {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii,ts-node,yaml'"
+          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='@cdktf/provider-kubernetes,cdk8s-cli,cdk8s,cdktf,constructs,jsii-rosetta,jsii,ts-node,yaml'"
         },
         {
           "exec": "yarn install --check-files"
