@@ -1,6 +1,18 @@
 # CDKTF CDK8s
 
-A compatability layer for using cdk8s constructs within Terraform CDK.
+![Status: Tech Preview](https://img.shields.io/badge/status-experimental-EAAA32) [![Releases](https://img.shields.io/github/release/cdktf/cdktf-cdk8s.svg)](https://github.com/cdktf/cdktf-cdk8s/releases)
+[![LICENSE](https://img.shields.io/github/license/cdktf/cdktf-cdk8s.svg)](https://github.com/cdktf/cdktf-cdk8s/blob/main/LICENSE)
+[![build](https://github.com/cdktf/cdktf-cdk8s/actions/workflows/build.yml/badge.svg)](https://github.com/cdktf/cdktf-cdk8s/actions/workflows/build.yml)
+
+A compatibility layer for using [cdk8s](https://cdk8s.io/) constructs within Terraform CDK.
+
+The cdk8s adapter is in technical preview, which means it's a community supported project. It still requires extensive testing and polishing to mature into a HashiCorp officially supported project. Please [file issues](https://github.com/cdktf/cdktf-cdk8s/issues/new/choose) generously and detail your experience while using the library. We welcome your feedback.
+
+By using the software in this repository, you acknowledge that: 
+* The cdk8s adapter is still in development, may change, and has not been released as a commercial product by HashiCorp and is not currently supported in any way by HashiCorp.
+* The cdk8s adapter is provided on an "as-is" basis, and may include bugs, errors, or other issues.
+* The cdk8s adapter is NOT INTENDED FOR PRODUCTION USE, use of the Software may result in unexpected results, loss of data, or other unexpected results, and HashiCorp disclaims any and all liability resulting from use of the cdk8s adapter.
+* HashiCorp reserves all rights to make all decisions about the features, functionality and commercial release (or non-release) of the cdk8s adapter, at any time and without any obligation or liability whatsoever.
 
 ## Usage
 
@@ -37,3 +49,9 @@ const app = new App();
 new MyStack(app, "cdktf-cdk8s");
 app.synth();
 ```
+
+## Contributing
+
+We welcome your contribution. Please understand that the experimental nature of this repository means that contributing code may be a bit of a moving target. If you have an idea for an enhancement or bug fix, and want to take on the work yourself, please first [create an issue](https://github.com/cdktf/cdktf-cdk8s/issues/new/choose) so that we can discuss the implementation with you before you proceed with the work.
+
+You can review our [contribution guide](https://github.com/cdktf/.github/blob/main/CONTRIBUTING.md) to begin.
