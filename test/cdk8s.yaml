@@ -1,0 +1,7 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
+output: dist
+pluginsDirectory: /home/runner/.cdk8s/plugins
+imports:
+  - k8s
