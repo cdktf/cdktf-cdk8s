@@ -295,10 +295,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-kubernetes@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-7.0.0.tgz#222f5e3eafe0ba1ae4a67f66a31e79b25561273a"
-  integrity sha512-TDvGmUh6rRcgMXCJJqFfW1uKe+v2bJ38gMCygMf4GtlzqSW1mcgoOl/edSiZYs9XJglYZIs61jh5i/VL1lbuIA==
+"@cdktf/provider-kubernetes@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-9.0.0.tgz#cba2dcb11438939b91c9304c4cff6315332651b2"
+  integrity sha512-jOL6yTcCNtjyKmcugLOpDBRATFx/wiEJ7Q6cw4dmDg5mjrkxnd0XgNI1Vr6LBSKCMhFc0ScH5gojC3lx8AfrPQ==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
