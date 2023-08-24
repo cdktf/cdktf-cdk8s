@@ -53,3 +53,4 @@ tsconfig.json
 !/LICENSE
 !/.github/workflows/auto-approve.yml
 !/.github/workflows/automerge.yml
+!/.github/workflows/upgrade-cdktf.yml
