@@ -43,7 +43,7 @@ const project = new ConstructLibraryCdktf({
     ignorePatterns: ["**/node_modules/**", "**/test/imports/**"],
   },
   docgen: false,
-  cdktfVersion: "0.17.0",
+  cdktfVersion: "0.18.0",
   publishToPypi: {
     distName: name,
     module: name.replace(/-/g, "_"),
@@ -67,9 +67,9 @@ new UpgradeCDKTF(project);
 
 project.addPeerDeps(
   "constructs@^10.0.25",
-  "@cdktf/provider-kubernetes@>=7.0.0",
+  "@cdktf/provider-kubernetes@>=9.0.0",
   "cdk8s@>=2.1.6",
-  "cdktf@>=0.17.0"
+  "cdktf@>=0.18.0"
 );
 
 project.addDevDeps("cdk8s-cli@>=2.0", "ts-node@10.9.1");
