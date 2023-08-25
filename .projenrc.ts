@@ -58,6 +58,7 @@ const project = new ConstructLibraryCdktf({
   projenrcTs: true,
   prettier: true,
   jsiiVersion: "^5.1.0",
+  pullRequestTemplate: false,
 });
 
 new CustomizedLicense(project);
