@@ -14,6 +14,12 @@ By using the software in this repository, you acknowledge that:
 * The cdk8s adapter is NOT INTENDED FOR PRODUCTION USE, use of the Software may result in unexpected results, loss of data, or other unexpected results, and HashiCorp disclaims any and all liability resulting from use of the cdk8s adapter.
 * HashiCorp reserves all rights to make all decisions about the features, functionality and commercial release (or non-release) of the cdk8s adapter, at any time and without any obligation or liability whatsoever.
 
+## Compatibility
+
+- `cdktf` >= 0.18.0
+- `cdk8s` >= 2.1.6
+- `constructs` >= 10.0.25
+
 ## Usage
 
 ```ts
