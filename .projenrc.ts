@@ -79,6 +79,8 @@ project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
 );
 
+project.addPackageIgnore("examples");
+
 // Run copywrite tool to add copyright headers to all files
 project.buildWorkflow?.addPostBuildSteps(
   {
@@ -91,6 +93,21 @@ project.buildWorkflow?.addPostBuildSteps(
 // Use pinned versions of github actions
 Object.entries(githubActionPinnedVersions).forEach(([action, sha]) => {
   project.github?.actions.set(action, `${action}@${sha}`);
+});
+
+const releaseWorkflow = project.tryFindObjectFile(
+  ".github/workflows/release.yml"
+);
+releaseWorkflow?.addOverride("on.push", {
+  branches: ["main"],
+  "paths-ignore": [
+    // don't do a release if the change was only to these files/directories
+    "examples/**",
+    ".github/ISSUE_TEMPLATE/**",
+    ".github/CODEOWNERS",
+    ".github/dependabot.yml",
+    ".github/**/*.md",
+  ],
 });
 
 project.synth();
