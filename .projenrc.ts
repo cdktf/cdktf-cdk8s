@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
+import { Stability } from "projen/lib/cdk";
 import { ConstructLibraryCdktf } from "projen/lib/cdktf";
 import { UpgradeDependenciesSchedule } from "projen/lib/javascript";
 import { AutoApprove } from "./projenrc/auto-approve";
@@ -24,30 +25,24 @@ const githubActionPinnedVersions = {
 };
 
 const project = new ConstructLibraryCdktf({
+  name,
+  repositoryUrl: "https://github.com/cdktf/cdktf-cdk8s.git",
+  description:
+    "A compatibility layer for using cdk8s constructs within Terraform CDK.",
   author: "HashiCorp",
   authorAddress: "https://hashicorp.com",
   authorOrganization: true,
   defaultReleaseBranch: "main",
-  name,
-  repositoryUrl: "https://github.com/cdktf/cdktf-cdk8s.git",
   bundledDeps: ["yaml@1.10.2"],
-  workflowGitIdentity: {
-    name: "team-tf-cdk",
-    email: "github-team-tf-cdk@hashicorp.com",
-  },
-  description:
-    "A compatibility layer for using cdk8s constructs within Terraform CDK." /* The description is just a string that helps people understand the purpose of the package. */,
   licensed: false,
+  projenrcTs: true,
+  prettier: true,
   eslintOptions: {
     dirs: ["src"],
     ignorePatterns: ["**/node_modules/**", "**/test/imports/**"],
   },
+  pullRequestTemplate: false,
   docgen: false,
-  cdktfVersion: "0.18.0",
-  publishToPypi: {
-    distName: name,
-    module: name.replace(/-/g, "_"),
-  },
   mergify: false,
   depsUpgradeOptions: {
     workflowOptions: {
@@ -55,10 +50,17 @@ const project = new ConstructLibraryCdktf({
       schedule: UpgradeDependenciesSchedule.WEEKLY,
     },
   },
-  projenrcTs: true,
-  prettier: true,
+  workflowGitIdentity: {
+    name: "team-tf-cdk",
+    email: "github-team-tf-cdk@hashicorp.com",
+  },
+  stability: Stability.EXPERIMENTAL,
+  publishToPypi: {
+    distName: name,
+    module: name.replace(/-/g, "_"),
+  },
+  cdktfVersion: "0.18.0",
   jsiiVersion: "^5.1.0",
-  pullRequestTemplate: false,
 });
 
 new CustomizedLicense(project);
