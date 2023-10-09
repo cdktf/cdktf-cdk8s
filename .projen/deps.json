@@ -1,11 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@cdktf/provider-kubernetes",
-      "version": "9.0.0",
-      "type": "build"
-    },
-    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -27,21 +22,6 @@
     {
       "name": "cdk8s-cli",
       "version": ">=2.0",
-      "type": "build"
-    },
-    {
-      "name": "cdk8s",
-      "version": "2.1.6",
-      "type": "build"
-    },
-    {
-      "name": "cdktf",
-      "version": "0.18.0",
-      "type": "build"
-    },
-    {
-      "name": "constructs",
-      "version": "10.0.25",
       "type": "build"
     },
     {
