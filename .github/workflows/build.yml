@@ -91,7 +91,7 @@ jobs:
     steps:
       - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
-          node-version: 16.x
+          node-version: 18.x
       - name: Download build artifacts
         uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
         with:
@@ -116,7 +116,7 @@ jobs:
     steps:
       - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
-          node-version: 16.x
+          node-version: 18.x
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
