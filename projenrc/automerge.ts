@@ -39,7 +39,16 @@ export class Automerge {
             uses: "actions/checkout@v3",
           },
           {
-            name: "Turn on automerge for this PR",
+            name: "Turn on automerge for this PR by Dependabot",
+            if: "github.actor == 'dependabot[bot]'",
+            run: "gh pr merge --auto --squash ${{ github.event.pull_request.number }}",
+            env: {
+              GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
+            },
+          },
+          {
+            name: "Turn on automerge for this PR by users other than Dependabot",
+            if: "github.actor != 'dependabot[bot]'",
             run: "gh pr merge --auto --squash ${{ github.event.pull_request.number }}",
             env: {
               GH_TOKEN: "${{ secrets.PROJEN_GITHUB_TOKEN }}",
@@ -48,6 +57,7 @@ export class Automerge {
         ],
         permissions: {
           contents: JobPermission.READ,
+          pullRequests: JobPermission.WRITE,
         },
       },
     });
