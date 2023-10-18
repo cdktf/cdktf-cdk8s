@@ -70,7 +70,7 @@ new UpgradeCDKTF(project);
 
 project.addPeerDeps(
   "constructs@^10.0.25",
-  "@cdktf/provider-kubernetes@>=9.0.0",
+  "@cdktf/provider-kubernetes@>=10.0.0",
   "cdk8s@>=2.1.6",
   "cdktf@>=0.19.0"
 );
