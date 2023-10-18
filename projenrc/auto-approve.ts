@@ -37,15 +37,15 @@ export class AutoApprove {
           },
           {
             name: "Auto-approve PRs by other users as team-tf-cdk",
-            if: "github.event.pull_request.user.login != 'team-tf-cdk'",
+            if: "github.event.pull_request.user.login != 'team-tf-cdk' && github.actor != 'dependabot[bot]'",
             run: "gh pr review ${{ github.event.pull_request.number }} --approve",
             env: {
               GH_TOKEN: "${{ secrets.PROJEN_GITHUB_TOKEN }}",
             },
           },
           {
-            name: "Auto-approve PRs by team-tf-cdk as github-actions[bot]",
-            if: "github.event.pull_request.user.login == 'team-tf-cdk'",
+            name: "Auto-approve PRs by team-tf-cdk or Dependabot as github-actions[bot]",
+            if: "github.event.pull_request.user.login == 'team-tf-cdk' || github.actor == 'dependabot[bot]'",
             run: "gh pr review ${{ github.event.pull_request.number }} --approve",
             env: {
               GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
