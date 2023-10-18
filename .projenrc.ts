@@ -59,7 +59,7 @@ const project = new ConstructLibraryCdktf({
     distName: name,
     module: name.replace(/-/g, "_"),
   },
-  cdktfVersion: "0.18.0",
+  cdktfVersion: "0.19.0",
   jsiiVersion: "^5.1.0",
 });
 
@@ -70,9 +70,9 @@ new UpgradeCDKTF(project);
 
 project.addPeerDeps(
   "constructs@^10.0.25",
-  "@cdktf/provider-kubernetes@>=9.0.0",
+  "@cdktf/provider-kubernetes@>=10.0.0",
   "cdk8s@>=2.1.6",
-  "cdktf@>=0.18.0"
+  "cdktf@>=0.19.0"
 );
 
 project.addDevDeps("cdk8s-cli@>=2.0", "ts-node@10.9.1");

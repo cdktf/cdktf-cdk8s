@@ -295,10 +295,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-kubernetes@9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-9.0.0.tgz#cba2dcb11438939b91c9304c4cff6315332651b2"
-  integrity sha512-jOL6yTcCNtjyKmcugLOpDBRATFx/wiEJ7Q6cw4dmDg5mjrkxnd0XgNI1Vr6LBSKCMhFc0ScH5gojC3lx8AfrPQ==
+"@cdktf/provider-kubernetes@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-10.0.0.tgz#54f62e3989bd2b70e059b06673646ea59e980e44"
+  integrity sha512-72dI4zXTQXhPhWxZFEYpMs8oOyHld0KnM/h5HKuS7d8VFDOcBh14Lut65LCSNyg2ky4vU+smFD/B++1fhzYyUw==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -1900,10 +1900,10 @@ cdk8s@^2.7.77:
   optionalDependencies:
     backport "8.5.0"
 
-cdktf@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.18.0.tgz#b79eb924afff7af38877bb4ffdfe3bdf954131b0"
-  integrity sha512-iTWy2g0mCE2YW2hPxdWEzMwCVgyzDyheHWJTS4OcLZsR+lXETFX0lonoc5XGnX8CHBL4AbFY+EEqCUs5v7A4bQ==
+cdktf@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.19.0.tgz#097a3241b95e77eeab8ae1f7a714bf45dc6ca55b"
+  integrity sha512-5tcNhvrvsE9WawC5cPwV7B9ATQ5lWNjyCJN7EnMofxTtkBEdnnGx0esC+vpNO4Fs0LhmV37qCUlm+K6anZaPYw==
   dependencies:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"

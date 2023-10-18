@@ -114,7 +114,7 @@
     },
     {
       "name": "@cdktf/provider-kubernetes",
-      "version": ">=9.0.0",
+      "version": ">=10.0.0",
       "type": "peer"
     },
     {
@@ -124,7 +124,7 @@
     },
     {
       "name": "cdktf",
-      "version": ">=0.18.0",
+      "version": ">=0.19.0",
       "type": "peer"
     },
     {
