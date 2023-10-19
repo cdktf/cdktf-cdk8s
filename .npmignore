@@ -21,4 +21,8 @@ dist
 tsconfig.tsbuildinfo
 /.eslintrc.json
 !.jsii
+scripts
 examples
+projenrc
+/.projenrc.ts
+.copywrite.hcl
