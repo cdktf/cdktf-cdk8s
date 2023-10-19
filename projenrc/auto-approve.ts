@@ -16,11 +16,12 @@ export class AutoApprove {
     if (!workflow) throw new Error("no workflow defined");
 
     workflow.on({
-      pullRequest: {
+      pullRequestTarget: {
         types: ["opened", "labeled", "ready_for_review", "reopened"],
       },
     });
 
+    const maintainerStatuses = `fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]')`;
     workflow.addJobs({
       approve: {
         runsOn: ["ubuntu-latest"],
@@ -37,15 +38,15 @@ export class AutoApprove {
           },
           {
             name: "Auto-approve PRs by other users as team-tf-cdk",
-            if: "github.event.pull_request.user.login != 'team-tf-cdk' && github.actor != 'dependabot[bot]'",
+            if: `github.event.pull_request.user.login != 'team-tf-cdk' && (contains(${maintainerStatuses}, github.event.pull_request.author_association) || github.actor == 'dependabot[bot])`,
             run: "gh pr review ${{ github.event.pull_request.number }} --approve",
             env: {
               GH_TOKEN: "${{ secrets.PROJEN_GITHUB_TOKEN }}",
             },
           },
           {
-            name: "Auto-approve PRs by team-tf-cdk or Dependabot as github-actions[bot]",
-            if: "github.event.pull_request.user.login == 'team-tf-cdk' || github.actor == 'dependabot[bot]'",
+            name: "Auto-approve PRs by team-tf-cdk as github-actions[bot]",
+            if: "github.event.pull_request.user.login == 'team-tf-cdk'",
             run: "gh pr review ${{ github.event.pull_request.number }} --approve",
             env: {
               GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
