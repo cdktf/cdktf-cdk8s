@@ -41,7 +41,7 @@ export class Automerge {
           },
           {
             name: "Turn on automerge for this PR by a trusted user or bot",
-            if: `github.event.pull_request.user.login == 'team-tf-cdk' || contains(${maintainerStatuses}, github.event.pull_request.author_association) || github.actor == 'dependabot[bot]`,
+            if: `github.event.pull_request.user.login == 'team-tf-cdk' || contains(${maintainerStatuses}, github.event.pull_request.author_association) || github.actor == 'dependabot[bot]'`,
             run: "gh pr merge --auto --squash ${{ github.event.pull_request.number }}",
             env: {
               GH_TOKEN: "${{ secrets.PROJEN_GITHUB_TOKEN }}",
