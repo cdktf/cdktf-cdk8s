@@ -38,7 +38,7 @@ export class AutoApprove {
           },
           {
             name: "Auto-approve PRs by other users as team-tf-cdk",
-            if: `github.event.pull_request.user.login != 'team-tf-cdk' && (contains(${maintainerStatuses}, github.event.pull_request.author_association) || github.actor == 'dependabot[bot])`,
+            if: `github.event.pull_request.user.login != 'team-tf-cdk' && (contains(${maintainerStatuses}, github.event.pull_request.author_association) || github.actor == 'dependabot[bot]')`,
             run: "gh pr review ${{ github.event.pull_request.number }} --approve",
             env: {
               GH_TOKEN: "${{ secrets.PROJEN_GITHUB_TOKEN }}",
