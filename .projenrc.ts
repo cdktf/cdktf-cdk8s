@@ -33,7 +33,7 @@ const project = new ConstructLibraryCdktf({
   authorAddress: "https://hashicorp.com",
   authorOrganization: true,
   defaultReleaseBranch: "main",
-  bundledDeps: ["yaml@1.10.2"],
+  bundledDeps: ["yaml@2.3.4"],
   licensed: false,
   projenrcTs: true,
   prettier: true,
@@ -71,11 +71,11 @@ new UpgradeCDKTF(project);
 project.addPeerDeps(
   "constructs@^10.0.25",
   "@cdktf/provider-kubernetes@>=10.0.0",
-  "cdk8s@>=2.1.6",
+  "cdk8s@>=2.8.0",
   "cdktf@>=0.19.0"
 );
 
-project.addDevDeps("cdk8s-cli@>=2.0", "ts-node@10.9.1");
+project.addDevDeps("cdk8s-cli@>=2.3", "ts-node@10.9.1");
 
 project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
