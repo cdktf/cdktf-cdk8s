@@ -21,7 +21,7 @@
     },
     {
       "name": "cdk8s-cli",
-      "version": ">=2.0",
+      "version": ">=2.3",
       "type": "build"
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "name": "yaml",
-      "version": "1.10.2",
+      "version": "2.3.4",
       "type": "bundled"
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "name": "cdk8s",
-      "version": ">=2.1.6",
+      "version": ">=2.8.0",
       "type": "peer"
     },
     {
