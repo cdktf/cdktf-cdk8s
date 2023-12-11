@@ -61,6 +61,7 @@ const project = new ConstructLibraryCdktf({
   },
   cdktfVersion: "0.19.0",
   jsiiVersion: "~5.2.0",
+  typescriptVersion: "~5.2.0", // should always be the same major/minor as JSII
 });
 
 new CustomizedLicense(project);
