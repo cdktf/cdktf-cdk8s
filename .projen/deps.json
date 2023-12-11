@@ -101,6 +101,7 @@
     },
     {
       "name": "typescript",
+      "version": "~5.2.0",
       "type": "build"
     },
     {
