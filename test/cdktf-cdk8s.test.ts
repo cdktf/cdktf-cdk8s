@@ -96,7 +96,7 @@ describe("CDK8sProvider", () => {
           "required_providers": {
             "kubernetes": {
               "source": "kubernetes",
-              "version": "2.23.0"
+              "version": "2.25.2"
             }
           }
         }
@@ -270,7 +270,7 @@ describe("CDK8sProvider", () => {
           "required_providers": {
             "kubernetes": {
               "source": "kubernetes",
-              "version": "2.23.0"
+              "version": "2.25.2"
             }
           }
         }
@@ -366,7 +366,7 @@ describe("CDK8sProvider", () => {
           "required_providers": {
             "kubernetes": {
               "source": "kubernetes",
-              "version": "2.23.0"
+              "version": "2.25.2"
             }
           }
         }
@@ -508,7 +508,7 @@ describe("CDK8sProvider", () => {
           "required_providers": {
             "kubernetes": {
               "source": "kubernetes",
-              "version": "2.23.0"
+              "version": "2.25.2"
             }
           }
         }
