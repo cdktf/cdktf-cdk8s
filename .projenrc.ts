@@ -59,7 +59,7 @@ const project = new ConstructLibraryCdktf({
     distName: name,
     module: name.replace(/-/g, "_"),
   },
-  cdktfVersion: "0.19.0",
+  cdktfVersion: "0.20.0",
   jsiiVersion: "~5.2.0",
   typescriptVersion: "~5.2.0", // should always be the same major/minor as JSII
 });
@@ -70,10 +70,10 @@ new Automerge(project);
 new UpgradeCDKTF(project);
 
 project.addPeerDeps(
-  "constructs@^10.0.25",
-  "@cdktf/provider-kubernetes@>=10.0.0",
+  "constructs@^10.3.0",
+  "@cdktf/provider-kubernetes@>=11.0.0",
   "cdk8s@>=2.8.0",
-  "cdktf@>=0.19.0"
+  "cdktf@>=0.20.0"
 );
 
 project.addDevDeps("cdk8s-cli@>=2.3", "ts-node@10.9.1");
