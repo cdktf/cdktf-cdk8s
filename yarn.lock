@@ -302,10 +302,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-kubernetes@10.0.0":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-10.0.0.tgz#54f62e3989bd2b70e059b06673646ea59e980e44"
-  integrity sha512-72dI4zXTQXhPhWxZFEYpMs8oOyHld0KnM/h5HKuS7d8VFDOcBh14Lut65LCSNyg2ky4vU+smFD/B++1fhzYyUw==
+"@cdktf/provider-kubernetes@11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-11.0.0.tgz#9bf38ff7aa602087475c4a35d11a63bc4b158294"
+  integrity sha512-h/xdKrEjyMe65rlazc00Mj5U2NPvdCjzG9LdZaCaNwdzm99lbbEWzgNwoWP9h+ASCTLP2va2Knub3xK2HY4zhw==
 
 "@colors/colors@1.6.0", "@colors/colors@^1.6.0":
   version "1.6.0"
@@ -1882,12 +1882,7 @@ concat-stream@^2.0.0:
     readable-stream "^3.0.2"
     typedarray "^0.0.6"
 
-constructs@10.0.25:
-  version "10.0.25"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.25.tgz#c2f03fb4da134105fdf5382f4c1557b89d90aeeb"
-  integrity sha512-QxY4A7caIW1tI5ztbdZHKU/nWXiqluujmEVj5xCVhFhoBgOqU4ja3z3zXY4DUn2nf+PLxCjulf+viQ/h9RXB8A==
-
-constructs@^10.0.0, constructs@^10.3.0:
+constructs@10.3.0, constructs@^10.0.0, constructs@^10.3.0:
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.3.0.tgz#4c246fce9cf8e77711ad45944e9fbd41f1501965"
   integrity sha512-vbK8i3rIb/xwZxSpTjz3SagHn1qq9BChLEfy5Hf6fB3/2eFbrwt2n9kHwQcS0CPTRBesreeAcsJfMq2229FnbQ==

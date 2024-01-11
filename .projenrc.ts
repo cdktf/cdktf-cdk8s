@@ -70,8 +70,8 @@ new Automerge(project);
 new UpgradeCDKTF(project);
 
 project.addPeerDeps(
-  "constructs@^10.0.25",
-  "@cdktf/provider-kubernetes@>=10.0.0",
+  "constructs@^10.3.0",
+  "@cdktf/provider-kubernetes@>=11.0.0",
   "cdk8s@>=2.8.0",
   "cdktf@>=0.20.0"
 );
