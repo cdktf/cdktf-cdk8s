@@ -18,3 +18,31 @@ updates:
       - security
     # Disable version updates for npm dependencies, only use Dependabot for security updates
     open-pull-requests-limit: 0
+  - package-ecosystem: npm
+    versioning-strategy: lockfile-only
+    directory: /examples/typescript/complex
+    schedule:
+      interval: daily
+    ignore:
+      - dependency-name: projen
+    labels:
+      - auto-approve
+      - automerge
+      - dependencies
+      - security
+    # Disable version updates for npm dependencies, only use Dependabot for security updates
+    open-pull-requests-limit: 0
+  - package-ecosystem: npm
+    versioning-strategy: lockfile-only
+    directory: /examples/typescript/hello-world
+    schedule:
+      interval: daily
+    ignore:
+      - dependency-name: projen
+    labels:
+      - auto-approve
+      - automerge
+      - dependencies
+      - security
+    # Disable version updates for npm dependencies, only use Dependabot for security updates
+    open-pull-requests-limit: 0
