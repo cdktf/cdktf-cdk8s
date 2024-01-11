@@ -18,7 +18,7 @@ By using the software in this repository, you acknowledge that:
 
 - `cdktf` >= 0.20.0
 - `cdk8s` >= 2.8.0
-- `constructs` >= 10.0.25
+- `constructs` >= 10.3.0
 
 ## Usage
 
