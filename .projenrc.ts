@@ -14,14 +14,15 @@ import { UpgradeCDKTF } from "./projenrc/upgrade-cdktf";
 const name = "cdktf-cdk8s";
 
 const githubActionPinnedVersions = {
-  "actions/checkout": "b4ffde65f46336ab88eb53be808477a3936bae11", // v4.1.1
-  "actions/download-artifact": "c850b930e6ba138125429b7e5c93fc707a7f8427", // v4.1.4
+  "actions/checkout": "692973e3d937129bcbf40652eb9f2f61becf3332", // v4.1.7
+  "actions/download-artifact": "65a9edc5881444af0b9093a5e628f2fe47ea3b2e", // v4.1.7
   "actions/github-script": "60a0d83039c74a4aee543508d2ffcb1c3799cdea", // v7.0.1
   "actions/setup-node": "60edb5dd545a775178f52524783378180af0d1f8", // v4.0.2
-  "actions/upload-artifact": "5d5d22a31266ced268874388b861e4b58bb5c2f3", // v4.3.1
+  "actions/upload-artifact": "65462800fd760344b1a7b4382951275a0abb4808", // v4.3.3
   "amannn/action-semantic-pull-request":
-    "e9fabac35e210fea40ca5b14c0da95a099eff26f", // v5.4.0
-  "peter-evans/create-pull-request": "a4f52f8033a6168103c2538976c07b467e8163bc", // v6.0.1
+    "0723387faaf9b38adef4775cd42cfd5155ed6017", // v5.5.3
+  "hashicorp/setup-copywrite": "32638da2d4e81d56a0764aa1547882fc4d209636", // v1.1.3
+  "peter-evans/create-pull-request": "c5a7806660adbe173f04e3e038b0ccdcd758773c", // v6.1.0
 };
 
 const project = new ConstructLibraryCdktf({
@@ -92,7 +93,7 @@ project.addPackageIgnore(".copywrite.hcl");
 project.buildWorkflow?.addPostBuildSteps(
   {
     name: "Setup Copywrite tool",
-    uses: "hashicorp/setup-copywrite@867a1a2a064a0626db322392806428f7dc59cb3e", // v1.1.2
+    uses: "hashicorp/setup-copywrite",
   },
   { name: "Add headers using Copywrite tool", run: "copywrite headers" }
 );
