@@ -17,7 +17,7 @@ jobs:
       CHECKPOINT_DISABLE: "1"
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Install
         run: yarn install
       - name: Get current CDKTF version
@@ -39,7 +39,7 @@ jobs:
         run: scripts/update-cdktf.sh ${{ steps.latest_version.outputs.value }}
       - name: Create draft pull request
         if: steps.current_version.outputs.short != steps.latest_version.outputs.short
-        uses: peter-evans/create-pull-request@a4f52f8033a6168103c2538976c07b467e8163bc
+        uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c
         with:
           commit-message: "chore!: upgrade to cdktf ${{ steps.latest_version.outputs.value }}"
           branch: auto/upgrade-cdktf-${{ steps.latest_version.outputs.short }}
