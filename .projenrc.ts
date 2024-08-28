@@ -15,10 +15,11 @@ const name = "cdktf-cdk8s";
 
 const githubActionPinnedVersions = {
   "actions/checkout": "692973e3d937129bcbf40652eb9f2f61becf3332", // v4.1.7
-  "actions/download-artifact": "65a9edc5881444af0b9093a5e628f2fe47ea3b2e", // v4.1.7
+  "actions/download-artifact": "fa0a91b85d4f404e444e00e005971372dc801d16", // v4.1.8
   "actions/github-script": "60a0d83039c74a4aee543508d2ffcb1c3799cdea", // v7.0.1
-  "actions/setup-node": "60edb5dd545a775178f52524783378180af0d1f8", // v4.0.2
-  "actions/upload-artifact": "65462800fd760344b1a7b4382951275a0abb4808", // v4.3.3
+  "actions/setup-node": "1e60f620b9541d16bece96c5465dc8ee9832be0b", // v4.0.3
+  "actions/setup-python": "39cd14951b08e74b54015e9e001cdefcf80e669f", // v5.1.1
+  "actions/upload-artifact": "89ef406dd8d7e03cfd12d9e0a4a378f454709029", // v4.3.5
   "amannn/action-semantic-pull-request":
     "0723387faaf9b38adef4775cd42cfd5155ed6017", // v5.5.3
   "hashicorp/setup-copywrite": "32638da2d4e81d56a0764aa1547882fc4d209636", // v1.1.3
