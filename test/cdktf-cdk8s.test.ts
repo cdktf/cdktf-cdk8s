@@ -5,8 +5,8 @@
 
 import { App, Chart } from "cdk8s";
 import { Testing } from "cdktf";
-import { KubeDeployment, KubeNamespace } from "./imports/k8s";
 import { CDK8sProvider } from "../src";
+import { KubeDeployment, KubeNamespace } from "./imports/k8s";
 
 describe("CDK8sProvider", () => {
   test("synthesises YAML into CDKTF plan", () => {
