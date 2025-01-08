@@ -14,7 +14,7 @@ import { UpgradeJSIIAndTypeScript } from "./projenrc/upgrade-jsii-typescript";
 
 const name = "cdktf-cdk8s";
 /** JSII and TSII should always use the same major/minor version range */
-const typescriptVersion = "~5.4.0";
+const typescriptVersion = "~5.5.0";
 
 const githubActionPinnedVersions = {
   "actions/checkout": "11bd71901bbe5b1630ceea73d27597364c9af683", // v4.2.2
