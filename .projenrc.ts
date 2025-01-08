@@ -10,8 +10,11 @@ import { AutoApprove } from "./projenrc/auto-approve";
 import { Automerge } from "./projenrc/automerge";
 import { CustomizedLicense } from "./projenrc/customized-license";
 import { UpgradeCDKTF } from "./projenrc/upgrade-cdktf";
+import { UpgradeJSIIAndTypeScript } from "./projenrc/upgrade-jsii-typescript";
 
 const name = "cdktf-cdk8s";
+/** JSII and TSII should always use the same major/minor version range */
+const typescriptVersion = "~5.4.0";
 
 const githubActionPinnedVersions = {
   "actions/checkout": "692973e3d937129bcbf40652eb9f2f61becf3332", // v4.1.7
@@ -62,14 +65,15 @@ const project = new ConstructLibraryCdktf({
     module: name.replace(/-/g, "_"),
   },
   cdktfVersion: "0.20.0",
-  jsiiVersion: "~5.4.0",
-  typescriptVersion: "~5.4.0", // should always be the same major/minor as JSII
+  typescriptVersion,
+  jsiiVersion: typescriptVersion,
 });
 
 new CustomizedLicense(project);
 new AutoApprove(project);
 new Automerge(project);
 new UpgradeCDKTF(project);
+new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
 project.addPeerDeps(
   "constructs@^10.3.0",
@@ -78,7 +82,12 @@ project.addPeerDeps(
   "cdktf@>=0.20.0"
 );
 
-project.addDevDeps("cdk8s-cli@>=2.3", "ts-node@10.9.1");
+project.addDevDeps(
+  "cdk8s-cli@>=2.3",
+  "ts-node@10.9.1",
+  "semver",
+  "@types/semver"
+);
 
 project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
