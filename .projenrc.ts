@@ -13,7 +13,8 @@ import { UpgradeCDKTF } from "./projenrc/upgrade-cdktf";
 import { UpgradeJSIIAndTypeScript } from "./projenrc/upgrade-jsii-typescript";
 
 const name = "cdktf-cdk8s";
-/** JSII and TSII should always use the same major/minor version range */
+const constructsVersion = "10.3.0";
+/** JSII and TS should always use the same major/minor version range */
 const typescriptVersion = "~5.5.0";
 
 const githubActionPinnedVersions = {
@@ -76,7 +77,7 @@ new UpgradeCDKTF(project);
 new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
 project.addPeerDeps(
-  "constructs@^10.3.0",
+  `constructs@^${constructsVersion}`,
   "@cdktf/provider-kubernetes@>=11.0.0",
   "cdk8s@>=2.8.0",
   "cdktf@>=0.20.0"
