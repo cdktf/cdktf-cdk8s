@@ -83,12 +83,7 @@ project.addPeerDeps(
   "cdktf@>=0.20.0"
 );
 
-project.addDevDeps(
-  "cdk8s-cli@>=2.3",
-  "ts-node@10.9.1",
-  "semver",
-  "@types/semver"
-);
+project.addDevDeps("cdk8s-cli@>=2.3", "ts-node@10.9.1");
 
 project.testTask.prependExec(
   `cd ./test && cdk8s import k8s --language typescript`
