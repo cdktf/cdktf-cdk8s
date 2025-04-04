@@ -31,7 +31,14 @@ export class UpgradeCDKTF {
         steps: [
           {
             name: "Checkout",
-            uses: "actions/checkout@v3",
+            uses: "actions/checkout",
+          },
+          {
+            name: "Setup Node.js",
+            uses: "actions/setup-node",
+            with: {
+              "node-version": project.minNodeVersion,
+            },
           },
           {
             name: "Install",
@@ -71,7 +78,7 @@ export class UpgradeCDKTF {
           {
             name: "Create draft pull request",
             if: "steps.current_version.outputs.short != steps.latest_version.outputs.short",
-            uses: "peter-evans/create-pull-request@v3",
+            uses: "peter-evans/create-pull-request",
             with: {
               "commit-message":
                 "chore!: upgrade to cdktf ${{ steps.latest_version.outputs.value }}",

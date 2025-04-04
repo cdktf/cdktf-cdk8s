@@ -19,15 +19,15 @@ const typescriptVersion = "~5.5.0";
 
 const githubActionPinnedVersions = {
   "actions/checkout": "11bd71901bbe5b1630ceea73d27597364c9af683", // v4.2.2
-  "actions/download-artifact": "fa0a91b85d4f404e444e00e005971372dc801d16", // v4.1.8
+  "actions/download-artifact": "95815c38cf2ff2164869cbab79da8d1f422bc89e", // v4.2.1
   "actions/github-script": "60a0d83039c74a4aee543508d2ffcb1c3799cdea", // v7.0.1
-  "actions/setup-node": "39370e3970a6d050c480ffad4ff0ed4d3fdee5af", // v4.1.0
-  "actions/setup-python": "0b93645e9fea7318ecaed2b359559ac225c90a2b", // v5.3.0
-  "actions/upload-artifact": "6f51ac03b9356f520e9adb1b1b7802705f340c2b", // v4.5.0
+  "actions/setup-node": "cdca7365b2dadb8aad0a33bc7601856ffabcc48e", // v4.3.0
+  "actions/setup-python": "42375524e23c412d93fb67b49958b491fce71c38", // v5.4.0
+  "actions/upload-artifact": "ea165f8d65b6e75b540449e92b4886f43607fa02", // v4.6.2
   "amannn/action-semantic-pull-request":
     "0723387faaf9b38adef4775cd42cfd5155ed6017", // v5.5.3
   "hashicorp/setup-copywrite": "32638da2d4e81d56a0764aa1547882fc4d209636", // v1.1.3
-  "peter-evans/create-pull-request": "67ccf781d68cd99b580ae25a5c18a1cc84ffff1f", // v7.0.6
+  "peter-evans/create-pull-request": "271a8d0340265f705b14b6d32b9829c1cb33d45e", // v7.0.8
 };
 
 const project = new ConstructLibraryCdktf({
