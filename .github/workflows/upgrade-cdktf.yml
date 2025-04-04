@@ -19,6 +19,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Setup Node.js
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e
+        with: {}
       - name: Install
         run: yarn install
       - name: Get current CDKTF version
@@ -43,7 +46,7 @@ jobs:
         run: scripts/update-cdktf.sh ${{ steps.latest_version.outputs.value }} ${{ steps.latest_version.outputs.constructs }}
       - name: Create draft pull request
         if: steps.current_version.outputs.short != steps.latest_version.outputs.short
-        uses: peter-evans/create-pull-request@67ccf781d68cd99b580ae25a5c18a1cc84ffff1f
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e
         with:
           commit-message: "chore!: upgrade to cdktf ${{ steps.latest_version.outputs.value }}"
           branch: auto/upgrade-cdktf-${{ steps.latest_version.outputs.short }}
