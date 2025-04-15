@@ -19,30 +19,67 @@ updates:
     # Disable version updates for npm dependencies, only use Dependabot for security updates
     open-pull-requests-limit: 0
   - package-ecosystem: npm
-    versioning-strategy: lockfile-only
+    versioning-strategy: increase-if-necessary
     directory: /examples/typescript/complex
     schedule:
-      interval: daily
+      interval: weekly
+    open-pull-requests-limit: 5
     ignore:
-      - dependency-name: projen
+      - dependency-name: "@types/node"
+      # For providers, ignore all non-breaking updates for version updates only
+      - dependency-name: "@cdktf/provider-*"
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
+    groups:
+      cdktf:
+        patterns:
+          - "cdktf"
+          - "cdktf-cli"
+          - "@cdktf/*"
+      jest:
+        patterns:
+          - "jest"
+          - "ts-jest"
+          - "@types/jest"
+          - "@jest/*"
+      cdk8s:
+        patterns:
+          - "cdk8s"
+          - "cdk8s-cli"
+          - "cdk8s-plus-22"
+          - "@cdk8s/*"
     labels:
       - auto-approve
       - automerge
       - dependencies
-      - security
-    # Disable version updates for npm dependencies, only use Dependabot for security updates
-    open-pull-requests-limit: 0
   - package-ecosystem: npm
-    versioning-strategy: lockfile-only
+    versioning-strategy: increase-if-necessary
     directory: /examples/typescript/hello-world
     schedule:
-      interval: daily
+      interval: weekly
+    open-pull-requests-limit: 5
     ignore:
-      - dependency-name: projen
+      - dependency-name: "@types/node"
+      # For providers, ignore all non-breaking updates for version updates only
+      - dependency-name: "@cdktf/provider-*"
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
+    groups:
+      cdktf:
+        patterns:
+          - "cdktf"
+          - "cdktf-cli"
+          - "@cdktf/*"
+      jest:
+        patterns:
+          - "jest"
+          - "ts-jest"
+          - "@types/jest"
+          - "@jest/*"
+      cdk8s:
+        patterns:
+          - "cdk8s"
+          - "cdk8s-cli"
+          - "@cdk8s/*"
     labels:
       - auto-approve
       - automerge
       - dependencies
-      - security
-    # Disable version updates for npm dependencies, only use Dependabot for security updates
-    open-pull-requests-limit: 0
