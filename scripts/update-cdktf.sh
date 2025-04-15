@@ -27,3 +27,13 @@ CI=0 npx projen
 echo "Updating README"
 sed -i 's/`cdktf` >= .*/`cdktf` >= '"$CDKTF_VERSION"'/' "$PROJECT_ROOT/README.md"
 sed -i 's/`constructs` >= .*/`constructs` >= '"$CONSTRUCTS_VERSION"'/' "$PROJECT_ROOT/README.md"
+
+echo "Updating examples"
+# Loop through all examples and update the cdktf version
+for example in $(find "$PROJECT_ROOT/examples/typescript" -mindepth 1 -maxdepth 1 -type d); do
+  echo "Updating example $example to cdktf version $CDKTF_VERSION and constructs version $CONSTRUCTS_VERSION"
+  cd "$example"
+  npm install
+  npm install -D cdktf-cli@^$CDKTF_VERSION
+  npm install cdktf@^$CDKTF_VERSION constructs@^$CONSTRUCTS_VERSION
+done

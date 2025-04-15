@@ -25,17 +25,17 @@
     "node": ">=10.12"
   },
   "dependencies": {
-    "cdktf": "latest",
-    "constructs": "^10.0.30",
-    "@cdktf/provider-kubernetes": "latest",
+    "@cdktf/provider-kubernetes": ">=11.0.0",
+    "cdk8s": "^2.8.0",
+    "cdktf": "^0.20.11",
     "cdktf-cdk8s": "latest",
-    "cdk8s": "^2.5.46"
+    "constructs": "^10.4.2"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.8",
-    "cdk8s-cli": "latest",
-    "cdktf-cli": "latest",
+    "cdk8s-cli": ">=2.3",
+    "cdktf-cli": "^0.20.11",
     "jest": "^27.4.7",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",
