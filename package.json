@@ -42,9 +42,9 @@
     "@typescript-eslint/parser": "^8",
     "cdk8s": "2.8.0",
     "cdk8s-cli": ">=2.3",
-    "cdktf": "0.20.0",
+    "cdktf": "0.21.0",
     "commit-and-tag-version": "^12",
-    "constructs": "10.3.0",
+    "constructs": "10.4.2",
     "eslint": "^9",
     "eslint-config-prettier": "^8.10.0",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -65,8 +65,8 @@
   "peerDependencies": {
     "@cdktf/provider-kubernetes": ">=11.0.0",
     "cdk8s": ">=2.8.0",
-    "cdktf": ">=0.20.0",
-    "constructs": "^10.3.0"
+    "cdktf": ">=0.21.0",
+    "constructs": "^10.4.2"
   },
   "dependencies": {
     "yaml": "2.3.4"
