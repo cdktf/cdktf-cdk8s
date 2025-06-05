@@ -78,7 +78,7 @@ new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
 project.addPeerDeps(
   `constructs@^${constructsVersion}`,
-  "@cdktf/provider-kubernetes@>=11.0.0",
+  "@cdktf/provider-kubernetes@>=12.0.0",
   "cdk8s@>=2.8.0",
   "cdktf@>=0.21.0"
 );

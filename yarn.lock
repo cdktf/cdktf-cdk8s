@@ -284,10 +284,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-kubernetes@11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-kubernetes/-/provider-kubernetes-11.0.0.tgz#9bf38ff7aa602087475c4a35d11a63bc4b158294"
-  integrity sha512-h/xdKrEjyMe65rlazc00Mj5U2NPvdCjzG9LdZaCaNwdzm99lbbEWzgNwoWP9h+ASCTLP2va2Knub3xK2HY4zhw==
+"@cdktf/provider-kubernetes@12.0.0":
+  version "12.0.0"
+  resolved "https://registry.npmjs.org/@cdktf/provider-kubernetes/-/provider-kubernetes-12.0.0.tgz#9d466cc15c7bbddb546342ee6c4b0ff9c290fe53"
+  integrity sha512-KrxZIXmw/lLLM17zjV/+r7EA613HhQbenR6n4lHQyQgn/GgqldqiSWsZtOEIv3WVaNyKfp4tftgNFUg9IpdAgQ==
 
 "@colors/colors@1.6.0", "@colors/colors@^1.6.0":
   version "1.6.0"
