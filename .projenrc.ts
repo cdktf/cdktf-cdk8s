@@ -13,7 +13,7 @@ import { UpgradeCDKTF } from "./projenrc/upgrade-cdktf";
 import { UpgradeJSIIAndTypeScript } from "./projenrc/upgrade-jsii-typescript";
 
 const name = "cdktf-cdk8s";
-const constructsVersion = "10.3.0";
+const constructsVersion = "10.4.2";
 /** JSII and TS should always use the same major/minor version range */
 const typescriptVersion = "~5.7.0";
 
@@ -65,7 +65,7 @@ const project = new ConstructLibraryCdktf({
     distName: name,
     module: name.replace(/-/g, "_"),
   },
-  cdktfVersion: "0.20.0",
+  cdktfVersion: "0.21.0",
   typescriptVersion,
   jsiiVersion: typescriptVersion,
 });
@@ -78,9 +78,9 @@ new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
 project.addPeerDeps(
   `constructs@^${constructsVersion}`,
-  "@cdktf/provider-kubernetes@>=11.0.0",
+  "@cdktf/provider-kubernetes@>=12.0.0",
   "cdk8s@>=2.8.0",
-  "cdktf@>=0.20.0"
+  "cdktf@>=0.21.0"
 );
 
 project.addDevDeps("cdk8s-cli@>=2.3", "ts-node@10.9.1");
